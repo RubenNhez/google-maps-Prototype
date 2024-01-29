@@ -16,8 +16,8 @@ import { useState } from 'react'
 
 import { useRef } from 'react';
 
-// Center of the map 
-const center = {lat: 48.8584, lng: 2.2945}
+// Center of the map (Goldsmiths University)
+const center = {lat: 51.47499891792622, lng: -0.035245338626442}
 
 //Location
 
@@ -42,6 +42,12 @@ const {isLoaded} = useJsApiLoader({
   if(!isLoaded) {
     return <SkeletonText />
   }
+
+  // HOW TO DO BUS ROUTES
+      /* eslint-disable-next-line no-undef */
+      // travelMode: google.maps.TransitMode.BUS,
+      /* eslint-disable-next-line no-undef */
+      // travelMode: google.maps.TravelMode.TRANSIT
   
   async function calculateRoute() {
     if (originRef.current.value === '' || destionationRef.current.value === '') {
@@ -54,7 +60,7 @@ const {isLoaded} = useJsApiLoader({
       origin: originRef.current.value,
       destination: destionationRef.current.value,
       /* eslint-disable-next-line no-undef */
-      travelMode: google.maps.TravelMode.DRIVING
+      travelMode: google.maps.TravelMode.WALKING
 
     })
 
