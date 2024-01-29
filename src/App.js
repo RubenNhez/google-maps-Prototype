@@ -16,11 +16,11 @@ import { useState } from 'react'
 
 import { useRef } from 'react';
 
+
 // Center of the map (Goldsmiths University)
-const center = {lat: 51.47499891792622, lng: -0.035245338626442}
+const center = {lat: 51.47442, lng: -0.03541}
 
 //Location
-
 
 
 function App() {
@@ -37,6 +37,11 @@ const {isLoaded} = useJsApiLoader({
   const originRef = useRef()
 
   const destionationRef = useRef()
+
+/* global google */
+
+  
+
 
 
   if(!isLoaded) {
@@ -93,10 +98,23 @@ const {isLoaded} = useJsApiLoader({
         zoom= {15} 
         mapContainerStyle={{width: '100%', height: '100%'}}
         
-        onLoad={(map) => setMap(map)}
+        onLoad={(map) => { 
+          setMap(map)
+          //Circle around goldsmiths test
+          const circle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: center,
+            radius: 100,
+            map: map
+          });
+        setMap(circle)
+        }}
         
         >
-
           {/*Display zones or directions */}
 
           {directionsResponse && <DirectionsRenderer directions={directionsResponse}/> }
