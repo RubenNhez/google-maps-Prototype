@@ -20,6 +20,21 @@ import { useRef } from 'react';
 // Center of the map (Goldsmiths University)
 const center = {lat: 51.47442, lng: -0.03541}
 
+//WESTMINSTER
+
+//Violence (RED)
+const WhitehallCt = {lat: 51.50602 , lng:-0.12462 }
+
+//Theft (Lime)
+const ScotlandYard = {lat: 51.50612 , lng:-0.12565 }
+const KoreanCC = {lat: 51.50697,lng: -0.12499}
+const CraigCt = {lat: 51.50671, lng: -0.12704}
+//Robbery/Burglary/Shoplifting (Orange/Amber)
+const HorseGuardsAve  ={lat:51.50500, lng: -0.12481}
+
+//Vehicle crime (Purple)
+
+
 //Location
 
 
@@ -112,6 +127,81 @@ const {isLoaded} = useJsApiLoader({
             map: map
           });
         setMap(circle)
+          
+          //Westminster
+          //Violence
+          const V1 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: WhitehallCt,
+            radius: 30,
+            map: map
+          });
+        setMap(V1)
+
+        //Theft
+          const T1 = new google.maps.Circle({
+            strokeColor: '#00FF00',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#00FF00',
+            fillOpacity: .4,
+            center: ScotlandYard,
+            radius: 30,
+            map: map
+          });
+        setMap(T1)
+
+          const T2 = new google.maps.Circle({
+            strokeColor: '#00FF00',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#00FF00',
+            fillOpacity: .4,
+            center: KoreanCC,
+            radius: 20,
+            map: map
+          });
+        setMap(T2)
+
+          const T3 = new google.maps.Circle({
+            strokeColor: '#00FF00',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#00FF00',
+            fillOpacity: .4,
+            center: CraigCt,
+            radius: 50,
+            map: map
+          });
+        setMap(T3)
+
+        //Robbery/Burglary/Shoplifting (Orange/Amber)
+          const RBS1 = new google.maps.Circle({
+            strokeColor: '#FFA500',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FFA500',
+            fillOpacity: .4,
+            center: HorseGuardsAve,
+            radius: 50,
+            map: map
+          });
+        setMap(RBS1)
+
+
+
+
+
+
+
+
+
+
+
         }}
         
         >
