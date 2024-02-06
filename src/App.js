@@ -7,6 +7,7 @@ import {
   IconButton,
   Input,
   Text,
+  position,
 } from '@chakra-ui/react'
 import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 
@@ -44,9 +45,13 @@ const PageSt = {lat: 51.493938, lng: -0.129264}
 const RegencySt = {lat: 51.494229, lng: -0.132351}
 const VincentStreet = {lat: 51.492524, lng: -0.131342}
 const RegencyStreet = {lat: 51.492406, lng: -0.132277}
-
-
-
+const WalcottSt = {lat: 51.493295, lng: -0.137398}
+const VauxhallBridgeRoad = {lat: 51.492621, lng: -0.137603}
+const HatherleyStreet = {lat: 51.492692, lng: -0.137361}
+const HerrickSt = {lat: 51.491102, lng: -0.129670}
+const CuretonSt = {lat: 51.490623, lng: -0.130482}
+const AtterburySt = {lat:51.490485, lng: -0.127659}
+const VictoriaStreet = {lat: 51.496596, lng: -0.142520}
 
 //Theft (Lime)
 const ScotlandYard = {lat: 51.50612 , lng:-0.12565 }
@@ -76,6 +81,12 @@ const PageStreet = {lat: 51.493996, lng:-0.126793}
 const MaunselSt = {lat: 51.494517, lng: -0.132976}
 const RochesterSt = {lat: 51.495079, lng: -0.134605}
 const VincentSt = {lat: 51.492958, lng: -0.131147}
+const HatherleySt = {lat: 51.492964, lng: -0.137797}
+const DouglasStreet = {lat: 51.491329, lng: -0.133512}
+const Millbank = {lat:51.491832, lng: -0.125412};
+const BessboroughGardens = {lat: 51.488892, lng: -0.129819};
+const VictoriaSquare = {lat: 51.497790, lng: -0.144900};
+const LowerGrosvenorPlace = {lat: 51.496846, lng: -0.141836}
 
 //Robbery/Burglary/Shoplifting (Orange/Amber)
 const HorseGuardsAve  ={lat:51.50500, lng: -0.12481}
@@ -85,12 +96,19 @@ const B323 = {lat: 51.49736, lng: -0.13567}
 const SaintMatthewSt = {lat: 51.496899,lng: -0.133187}
 const MonckStreet = {lat: 51.495408, lng: -0.130747}
 const HidePlace = {lat: 51.492091, lng: -0.133685}
+const WillowPlace = {lat: 51.493132, lng: -0.137973}
+const DouglasSt = {lat: 51.491377, lng: -0.133639}
+const BeestonPlace = {lat: 51.497926, lng:-0.145605}
+const VictoriaSqr = {lat: 51.497987,lng: - 0.144777}
+const AllingtonSt = {lat: 51.496806, lng: -0.142958}
+const VauxhallBridgeRd = {lat: 51.496271, lng: -0.142462}
 
 //Vehicle crime (Purple)
 const DacreSreet = {lat: 51.49894, lng: -0.13287}
 const MonckSt = {lat: 51.496294, lng: -0.130817}
 const RutherfordSt = {lat: 51.494081, lng:-0.132844}
 const EsterbrookeSt = {lat: 51.491998, lng: -0.132809}
+const PonsonbyPlace = {lat: 51.490199, lng: -0.130802}
 //Location
 
 
@@ -126,25 +144,39 @@ const {isLoaded} = useJsApiLoader({
       // travelMode: google.maps.TravelMode.TRANSIT
   
   async function calculateRoute() {
+    const selectTravelMode = document.getElementById('travels').value;
     if (originRef.current.value === '' || destionationRef.current.value === '') {
       return
     }
     /* eslint-disable-next-line no-undef */
     const directionsService = new google.maps.DirectionsService()
+ 
     const results = await directionsService.route ({
       
       origin: originRef.current.value,
       destination: destionationRef.current.value,
       /* eslint-disable-next-line no-undef */
-      travelMode: google.maps.TravelMode.WALKING
+      travelMode: getGoogleMapsTravelMode(selectTravelMode)
 
-    })
-
+    });
+  
     setDirectionResponse(results)
     setDistance(results.routes[0].legs[0].distance.text)
     setDuration(results.routes[0].legs[0].duration.text)
-  }
-
+    }
+  
+   function getGoogleMapsTravelMode(selectTravelMode) {
+    switch(selectTravelMode) {
+      case 'Walking':
+        return google.maps.TravelMode.WALKING;
+      case 'Bicycling':
+        return google.maps.TravelMode.BICYCLING;
+      case 'Driving':
+        return google.maps.TravelMode.DRIVING;
+      case 'Public Transport':
+        return google.maps.TravelMode.TRANSIT;
+    }
+   }
    function clearRoute() {
     setDirectionResponse(null)
     setDistance('')
@@ -152,6 +184,34 @@ const {isLoaded} = useJsApiLoader({
     originRef.current.value = ''
     destionationRef.current.value = ''
    }
+
+   var UserlocationLat = 0;
+   var UserlocationLng = 0;
+   const Userlocation = {lat: UserlocationLat, lng: UserlocationLng};
+
+  findMyCoordinates();
+
+
+   function findMyCoordinates() {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position.coords.latitude, position.coords.longitude)
+        UserlocationLat = position.coords.latitude
+        UserlocationLng = position.coords.longitude
+
+        Userlocation.lat = UserlocationLat;
+        Userlocation.lng = UserlocationLng;
+
+      },
+      (err) => {
+        alert(err.message)
+      })
+
+    } else {
+      alert("Geolocation is not supported by your browser")
+    }
+   }
+
 
   return (
     <Flex
@@ -436,6 +496,92 @@ const {isLoaded} = useJsApiLoader({
             map: map
           });
           setMap(V21)
+
+          const V22 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: WalcottSt,
+            radius: 10,
+            map: map
+          });
+          setMap(V22)
+
+          
+          const V23 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: VauxhallBridgeRoad,
+            radius: 10,
+            map: map
+          });
+          setMap(V23)
+
+          const V24 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: HatherleyStreet,
+            radius: 10,
+            map: map
+          });
+          setMap(V24)
+
+          const V25 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: HerrickSt,
+            radius: 25,
+            map: map
+          });
+          setMap(V25)
+
+          const V26 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: CuretonSt,
+            radius: 15,
+            map: map
+          });
+          setMap(V26)
+
+          const V27 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: AtterburySt,
+            radius: 15,
+            map: map
+          });
+          setMap(V27)
+
+          const V28 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: VictoriaStreet,
+            radius: 50,
+            map: map
+          });
+          setMap(V28)
+
 
         //Theft
           const T1 = new google.maps.Circle({
@@ -760,6 +906,80 @@ const {isLoaded} = useJsApiLoader({
       });
     setMap(T27)
 
+      const T28 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: HatherleySt,
+        radius: 10,
+        map: map
+      });
+    setMap(T28)
+
+      const T29 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: DouglasStreet,
+        radius: 10,
+        map: map
+      });
+    setMap(T29)
+
+      const T30 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: Millbank,
+        radius: 20,
+        map: map
+      });
+    setMap(T30)
+
+      const T31 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: BessboroughGardens,
+        radius: 30,
+        map: map
+      });
+    setMap(T31)
+
+      const T32 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: VictoriaSquare,
+        radius: 20,
+        map: map
+      });
+    setMap(T32)
+
+      const T33 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: LowerGrosvenorPlace,
+        radius: 45,
+        map: map
+      });
+    setMap(T33)
+
+
+
         //Robbery/Burglary/Shoplifting (Orange/Amber)
           const RBS1 = new google.maps.Circle({
             strokeColor: '#FFA500',
@@ -833,18 +1053,91 @@ const {isLoaded} = useJsApiLoader({
       });
     setMap(RBS6)
 
-    const RBS7 = new google.maps.Circle({
+      const RBS7 = new google.maps.Circle({
+        strokeColor: '#FFA500',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#FFA500',
+        fillOpacity: .4,
+        center: HidePlace,
+        radius: 15,
+        map: map
+      });
+    setMap(RBS7)
+      
+      const RBS8 = new google.maps.Circle({
+        strokeColor: '#FFA500',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#FFA500',
+        fillOpacity: .4,
+        center: WillowPlace,
+        radius: 10,
+        map: map
+      });
+    setMap(RBS8)
+
+      const RBS9 = new google.maps.Circle({
+        strokeColor: '#FFA500',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#FFA500',
+        fillOpacity: .4,
+        center: DouglasSt,
+        radius: 30,
+        map: map
+      });
+    setMap(RBS9)
+
+    const RBS10 = new google.maps.Circle({
       strokeColor: '#FFA500',
       strokeWeight: 2,
       strokeOpacity: 1,
       fillColor: '#FFA500',
       fillOpacity: .4,
-      center: HidePlace,
-      radius: 15,
+      center: BeestonPlace,
+      radius: 20,
       map: map
     });
-  setMap(RBS7)
-      
+  setMap(RBS10)
+
+    const RBS11 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: VictoriaSqr,
+      radius: 20,
+      map: map
+    });
+  setMap(RBS11)
+
+    const RBS12 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: AllingtonSt,
+      radius: 10,
+      map: map
+    });
+  setMap(RBS12)
+
+    const RBS13 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: VauxhallBridgeRd,
+      radius: 25,
+      map: map
+    });
+  setMap(RBS13)
+
+
 
 
         //Vehicle Crimes
@@ -896,6 +1189,18 @@ const {isLoaded} = useJsApiLoader({
       });
     setMap(VehC4)
 
+      const VehC5 = new google.maps.Circle({
+        strokeColor: '#800080',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#800080',
+        fillOpacity: .4,
+        center: PonsonbyPlace,
+        radius: 20,
+        map: map
+      });
+    setMap(VehC5)
+
 
 
 
@@ -932,6 +1237,13 @@ const {isLoaded} = useJsApiLoader({
           <Autocomplete>
             <Input type='text' placeholder='Destination' ref={destionationRef}/>
           </Autocomplete>
+          <label for ="travels">Choose a mode of transport:</label>
+          <select name='travels' id='travels'>
+          <option value="Walking">Walking</option>
+          <option value="Bicycling">Bicycling</option>  
+          <option value="Public Transport">Public Transport</option>  
+          <option value="Driving">Driving</option>  
+          </select>
 
           <ButtonGroup>
             <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
@@ -951,7 +1263,14 @@ const {isLoaded} = useJsApiLoader({
             aria-label='center back'
             icon={<FaLocationArrow />}
             isRound
-            onClick={() => map.panTo(center)}
+            onClick={() => {
+              if(map && map.panTo) {
+                map.panTo(Userlocation);
+              }
+              else {console.error ("error")}
+            }
+              
+            }
           />
         </HStack>
       </Box>
