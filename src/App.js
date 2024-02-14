@@ -52,6 +52,15 @@ const HerrickSt = {lat: 51.491102, lng: -0.129670}
 const CuretonSt = {lat: 51.490623, lng: -0.130482}
 const AtterburySt = {lat:51.490485, lng: -0.127659}
 const VictoriaStreet = {lat: 51.496596, lng: -0.142520}
+const ThirlebyRoad = {lat: 51.496158, lng: -0.138331}
+const GreencoatRow = {lat: 51.495541, lng: -0.136404}
+const FrancisSt = {lat: 51.495182, lng: -0.138114}
+const MorpethTerrace = {lat:51.495287,lng:-0.139967}
+const StillingtonStreet = {lat: 51.494323, lng: -0.137402}
+const SpenserStreet = {lat: 51.497474, lng: -0.137060}
+const VandonStreet = {lat: 51.498760, lng: -0.136475}
+const BuckinghamGate = {lat: 51.499252, lng: -0.138648}
+const PalaceStreet = {lat: 51.499008, lng: -0.142333}
 
 //Theft (Lime)
 const ScotlandYard = {lat: 51.50612 , lng:-0.12565 }
@@ -87,6 +96,19 @@ const Millbank = {lat:51.491832, lng: -0.125412};
 const BessboroughGardens = {lat: 51.488892, lng: -0.129819};
 const VictoriaSquare = {lat: 51.497790, lng: -0.144900};
 const LowerGrosvenorPlace = {lat: 51.496846, lng: -0.141836}
+const KingsScholarsPassage = {lat: 51.495889, lng:-0.141602}
+const AshleyPl = {lat: 51.496255, lng: -0.140257}
+const AmbrosdenAvenue = {lat: 51.496387, lng: -0.139407}
+const thirlebyrd = {lat: 51.496364, lng: -0.138538}
+const howichplace = {lat: 51.496783, lng: -0.136799}
+const ArtilleryRow = {lat: 51.496422, lng: -0.135673}
+const FrancisStreet = {lat: 51.495283, lng: -0.138347}
+const SpenserSt = {lat: 51.497923, lng: -0.136431}
+const VandonSt = {lat: 51.498753, lng: -0.136759}
+const QueenAnneGate = {lat: 51.500546, lng: -0.133356}
+const PalaceSt = {lat: 51.499074, lng: -0.142662}
+const Warwichrow = {lat: 51.498402, lng: -0.142873}
+const StaffordPlace = {lat: 51.499522, lng: -0.141418}
 
 //Robbery/Burglary/Shoplifting (Orange/Amber)
 const HorseGuardsAve  ={lat:51.50500, lng: -0.12481}
@@ -102,6 +124,11 @@ const BeestonPlace = {lat: 51.497926, lng:-0.145605}
 const VictoriaSqr = {lat: 51.497987,lng: - 0.144777}
 const AllingtonSt = {lat: 51.496806, lng: -0.142958}
 const VauxhallBridgeRd = {lat: 51.496271, lng: -0.142462}
+const AmbrosdenAve = {lat: 51.496349, lng: -0.139490}
+const HowichPlace = {lat:51.496689, lng: -0.137099}
+const StillingtonSt = {lat: 51.494555, lng: -0.138282}
+const CardinalWalk = {lat: 51.498009, lng: -0.140239}
+const WarwichRow = {lat: 51.498428, lng:-0.142855}
 
 //Vehicle crime (Purple)
 const DacreSreet = {lat: 51.49894, lng: -0.13287}
@@ -109,6 +136,8 @@ const MonckSt = {lat: 51.496294, lng: -0.130817}
 const RutherfordSt = {lat: 51.494081, lng:-0.132844}
 const EsterbrookeSt = {lat: 51.491998, lng: -0.132809}
 const PonsonbyPlace = {lat: 51.490199, lng: -0.130802}
+const ThirlebyRd = {lat: 51.496344, lng: -0.138701}
+const HowichPl = {lat: 51.496677, lng: -0.137328}
 //Location
 
 
@@ -582,6 +611,117 @@ const {isLoaded} = useJsApiLoader({
           });
           setMap(V28)
 
+          const V29 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: ThirlebyRoad,
+            radius: 20,
+            map: map
+          });
+          setMap(V29)
+
+          const V30 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: GreencoatRow,
+            radius: 10,
+            map: map
+          });
+          setMap(V30)
+
+          const V31 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: FrancisSt,
+            radius: 15,
+            map: map
+          });
+          setMap(V31)
+
+          const V32 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: MorpethTerrace, 
+            radius: 10,
+            map: map
+          });
+          setMap(V32)
+
+          const V33 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: StillingtonStreet, 
+            radius: 10,
+            map: map
+          });
+          setMap(V33)
+
+          const V34 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: SpenserStreet, 
+            radius: 15,
+            map: map
+          });
+          setMap(V34)
+
+          const V35 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: VandonStreet, 
+            radius: 10,
+            map: map
+          });
+          setMap(V35)
+
+          const V36 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: BuckinghamGate, 
+            radius: 10,
+            map: map
+          });
+          setMap(V36)
+
+          const V37 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: PalaceStreet, 
+            radius: 20,
+            map: map
+          });
+          setMap(V37)
+
+
+
+
 
         //Theft
           const T1 = new google.maps.Circle({
@@ -978,6 +1118,169 @@ const {isLoaded} = useJsApiLoader({
       });
     setMap(T33)
 
+      const T34 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center:KingsScholarsPassage,
+        radius: 30,
+        map: map
+      });
+    setMap(T34)
+
+      const T35 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: AshleyPl,
+        radius: 20,
+        map: map
+      });
+    setMap(T35)
+
+      const T36 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: AmbrosdenAvenue,
+        radius: 10,
+        map: map
+      });
+    setMap(T36)
+
+      const T37 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: thirlebyrd,
+        radius: 10,
+        map: map
+      });
+    setMap(T37)
+
+      const T38 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: howichplace,
+        radius: 90,
+        map: map
+      });
+    setMap(T38)
+
+      const T39 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: ArtilleryRow,
+        radius: 30,
+        map: map
+      });
+    setMap(T39)
+
+    
+      const T40 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: SpenserSt,
+        radius: 30,
+        map: map
+      });
+    setMap(T40)
+
+      const T41 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: FrancisStreet,
+        radius: 20,
+        map: map
+      });
+    setMap(T41)
+
+      const T42 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: VandonSt,
+        radius: 20,
+        map: map
+      });
+    setMap(T42)
+
+    
+      const T43 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: QueenAnneGate,
+        radius: 10,
+        map: map
+      });
+    setMap(T43)
+
+
+      const T44 = new google.maps.Circle({
+        strokeColor: '#00FF00',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#00FF00',
+        fillOpacity: .4,
+        center: PalaceSt,
+        radius: 20,
+        map: map
+      });
+    setMap(T44)
+
+    const T45 = new google.maps.Circle({
+      strokeColor: '#00FF00',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#00FF00',
+      fillOpacity: .4,
+      center: Warwichrow,
+      radius: 30,
+      map: map
+    });
+  setMap(T45)
+
+    const T46 = new google.maps.Circle({
+      strokeColor: '#00FF00',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#00FF00',
+      fillOpacity: .4,
+      center: StaffordPlace,
+      radius: 40,
+      map: map
+    });
+  setMap(T46)
+
+
+
+
+
 
 
         //Robbery/Burglary/Shoplifting (Orange/Amber)
@@ -1137,6 +1440,66 @@ const {isLoaded} = useJsApiLoader({
     });
   setMap(RBS13)
 
+    const RBS14 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: AmbrosdenAve,
+      radius: 10,
+      map: map
+    });
+  setMap(RBS14)
+
+    const RBS15 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: HowichPlace,
+      radius: 100,
+      map: map
+    });
+  setMap(RBS15)
+
+    const RBS16 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: StillingtonSt,
+      radius: 10,
+      map: map
+    });
+  setMap(RBS16)
+
+    const RBS17 = new google.maps.Circle({
+      strokeColor: '#FFA500',
+      strokeWeight: 2,
+      strokeOpacity: 1,
+      fillColor: '#FFA500',
+      fillOpacity: .4,
+      center: CardinalWalk,
+      radius: 30,
+      map: map
+    });
+  setMap(RBS17)
+
+  const RBS18 = new google.maps.Circle({
+    strokeColor: '#FFA500',
+    strokeWeight: 2,
+    strokeOpacity: 1,
+    fillColor: '#FFA500',
+    fillOpacity: .4,
+    center: WarwichRow,
+    radius: 15,
+    map: map
+  });
+setMap(RBS18)
+
 
 
 
@@ -1200,6 +1563,32 @@ const {isLoaded} = useJsApiLoader({
         map: map
       });
     setMap(VehC5)
+
+      const VehC6 = new google.maps.Circle({
+        strokeColor: '#800080',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#800080',
+        fillOpacity: .4,
+        center: ThirlebyRd,
+        radius: 10,
+        map: map
+      });
+    setMap(VehC6)
+
+      const VehC7 = new google.maps.Circle({
+        strokeColor: '#800080',
+        strokeWeight: 2,
+        strokeOpacity: 1,
+        fillColor: '#800080',
+        fillOpacity: .4,
+        center: HowichPl,
+        radius: 30,
+        map: map
+      });
+    setMap(VehC7)
+
+
 
 
 
