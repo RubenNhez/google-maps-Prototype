@@ -24,250 +24,269 @@ const center = {lat: 51.47442, lng: -0.03541}
 //WESTMINSTER
 
 //Violence (RED)
-const WhitehallCt = {lat: 51.50602 , lng:-0.12462 }
-const ParliamentSt = {lat: 51.50062, lng:-0.12615}
-const WestminsterPier = {lat: 51.50185, lng:-0.12400}
-const WestminsterArms = {lat: 51.50062, lng: -0.12980}
-const CarteretSt = {lat: 51.49973, lng: -0.13271}
-const DacreSt = {lat: 51.49890, lng: -0.13264}
-const StarbucksCoffee = {lat: 51.49908, lng: -0.13550}
-const VictoriaSt = {lat: 51.49754, lng: -0.13538}
-const OldPyeSt = {lat: 51.49754, lng: -0.13222}
-const StMatthewStreet = {lat: 51.497102, lng: -0.133238}
-const GreycoatPlace = {lat: 51.496519, lng: -0.133701}
-const GreatPeterStreet = {lat: 51.496876, lng:-0.130487}
-const DeanTrenchSt = {lat: 51.495912, lng: -0.128100 }
-const HorseferryRd = {lat: 51.494828, lng: -0.129069 }
-const ArnewaySt = {lat: 51.495378, lng: -0.131864}
-const ChadwichSt = {lat: 51.496322, lng: -0.131978}
-const ThorneySt = {lat: 51.493969, lng: -0.126162}
-const PageSt = {lat: 51.493938, lng: -0.129264}
-const RegencySt = {lat: 51.494229, lng: -0.132351}
-const VincentStreet = {lat: 51.492524, lng: -0.131342}
-const RegencyStreet = {lat: 51.492406, lng: -0.132277}
-const WalcottSt = {lat: 51.493295, lng: -0.137398}
-const VauxhallBridgeRoad = {lat: 51.492621, lng: -0.137603}
-const HatherleyStreet = {lat: 51.492692, lng: -0.137361}
-const HerrickSt = {lat: 51.491102, lng: -0.129670}
-const CuretonSt = {lat: 51.490623, lng: -0.130482}
-const AtterburySt = {lat:51.490485, lng: -0.127659}
-const VictoriaStreet = {lat: 51.496596, lng: -0.142520}
-const ThirlebyRoad = {lat: 51.496158, lng: -0.138331}
-const GreencoatRow = {lat: 51.495541, lng: -0.136404}
-const FrancisSt = {lat: 51.495182, lng: -0.138114}
-const MorpethTerrace = {lat:51.495287,lng:-0.139967}
-const StillingtonStreet = {lat: 51.494323, lng: -0.137402}
-const SpenserStreet = {lat: 51.497474, lng: -0.137060}
-const VandonStreet = {lat: 51.498760, lng: -0.136475}
-const BuckinghamGate = {lat: 51.499252, lng: -0.138648}
-const PalaceStreet = {lat: 51.499008, lng: -0.142333}
+const WhitehallCt = {lat: 51.50602 , lng:-0.12462, radius:30}
+const ParliamentSt = {lat: 51.50062, lng:-0.12615, radius:50}
+const WestminsterPier = {lat: 51.50185, lng:-0.12400, radius:50}
+const WestminsterArms = {lat: 51.50062, lng: -0.12980, radius:20}
+const CarteretSt = {lat: 51.49973, lng: -0.13271, radius:15}
+const DacreSt = {lat: 51.49890, lng: -0.13264, radius:15}
+const StarbucksCoffee = {lat: 51.49908, lng: -0.13550, radius:15}
+const VictoriaSt = {lat: 51.49754, lng: -0.13538, radius:10}
+const OldPyeSt = {lat: 51.49754, lng: -0.13222, radius:40}
+const StMatthewStreet = {lat: 51.497102, lng: -0.133238, radius:10}
+const GreycoatPlace = {lat: 51.496519, lng: -0.133701, radius:10}
+const GreatPeterStreet = {lat: 51.496876, lng:-0.130487, radius:50}
+const DeanTrenchSt = {lat: 51.495912, lng: -0.128100 , radius:10}
+const HorseferryRd = {lat: 51.494828, lng: -0.129069 , radius:20}
+const ArnewaySt = {lat: 51.495378, lng: -0.131864, radius:20}
+const ChadwichSt = {lat: 51.496322, lng: -0.131978, radius:20}
+const ThorneySt = {lat: 51.493969, lng: -0.126162, radius:10}
+const PageSt = {lat: 51.493938, lng: -0.129264, radius:20}
+const RegencySt = {lat: 51.494229, lng: -0.132351, radius:20}
+const VincentStreet = {lat: 51.492524, lng: -0.131342, radius:20}
+const RegencyStreet = {lat: 51.492406, lng: -0.132277, radius:10}
+const WalcottSt = {lat: 51.493295, lng: -0.137398, radius:10}
+const VauxhallBridgeRoad = {lat: 51.492621, lng: -0.137603, radius:10}
+const HatherleyStreet = {lat: 51.492692, lng: -0.137361, radius:10}
+const HerrickSt = {lat: 51.491102, lng: -0.129670, radius:25}
+const CuretonSt = {lat: 51.490623, lng: -0.130482, radius:15}
+const AtterburySt = {lat:51.490485, lng: -0.127659, radius:15}
+const VictoriaStreet = {lat: 51.496596, lng: -0.142520, radius:50}
+const ThirlebyRoad = {lat: 51.496158, lng: -0.138331, radius:20}
+const GreencoatRow = {lat: 51.495541, lng: -0.136404, radius:10}
+const FrancisSt = {lat: 51.495182, lng: -0.138114, radius:15}
+const MorpethTerrace = {lat:51.495287,lng:-0.139967, radius:10}
+const StillingtonStreet = {lat: 51.494323, lng: -0.137402, radius:10}
+const SpenserStreet = {lat: 51.497474, lng: -0.137060, radius:15}
+const VandonStreet = {lat: 51.498760, lng: -0.136475, radius:10}
+const BuckinghamGate = {lat: 51.499252, lng: -0.138648, radius:10}
+const PalaceStreet = {lat: 51.499008, lng: -0.142333, radius:20}
 
 //Theft (Lime)
-const ScotlandYard = {lat: 51.50612 , lng:-0.12565 }
-const KoreanCC = {lat: 51.50697,lng: -0.12499}
-const CraigCt = {lat: 51.50671, lng: -0.12704}
-const QueenElizabethCentre = {lat: 51.50053, lng:-0.12907}
-const MargaretChurch = {lat: 51.50012, lng:-0.12626}
-const TescoExpress = {lat: 51.50132, lng:-0.12484}
-const GeorgeStreet = {lat: 51.50114, lng:-0.12804}
-const OldQueenSt = {lat: 51.50078, lng:-0.13049}
-const Broadway = {lat: 51.49967, lng:-0.13306}
-const TheSanctuary = {lat: 51.49941, lng:-0.12937}
-const PalmerSt = {lat: 51.49794, lng: -0.13540}
-const B323St = {lat: 51.49764, lng: -0.13571}
-const StMatthewSt = {lat: 51.4975, lng: -0.1333}
-const RochesterRow = {lat: 51.496308,lng: -0.134781}
-const GreatSmithSt = {lat: 51.498083,lng: -0.129897}
-const GreatPeterSt = {lat: 51.496965,lng: -0.125598}
-const TuftonSt = {lat: 51.496588,lng: -0.128445}
-const BennettYard = {lat: 51.496046, lng: -0.128528}
-const SmithSquare = {lat: 51.495759, lng: -0.126720}
-const RomneySt = {lat: 51.495309, lng: -0.128019}
-const HorseferryRoad = {lat: 51.494866, lng: -0.129485}
-const MedwaySt = {lat: 51.495421, lng: -0.130969}
-const ChadwichStreet = {lat: 51.496606, lng: -0.132080}
-const PageStreet = {lat: 51.493996, lng:-0.126793}
-const MaunselSt = {lat: 51.494517, lng: -0.132976}
-const RochesterSt = {lat: 51.495079, lng: -0.134605}
-const VincentSt = {lat: 51.492958, lng: -0.131147}
-const HatherleySt = {lat: 51.492964, lng: -0.137797}
-const DouglasStreet = {lat: 51.491329, lng: -0.133512}
-const Millbank = {lat:51.491832, lng: -0.125412};
-const BessboroughGardens = {lat: 51.488892, lng: -0.129819};
-const VictoriaSquare = {lat: 51.497790, lng: -0.144900};
-const LowerGrosvenorPlace = {lat: 51.496846, lng: -0.141836}
-const KingsScholarsPassage = {lat: 51.495889, lng:-0.141602}
-const AshleyPl = {lat: 51.496255, lng: -0.140257}
-const AmbrosdenAvenue = {lat: 51.496387, lng: -0.139407}
-const thirlebyrd = {lat: 51.496364, lng: -0.138538}
-const howichplace = {lat: 51.496783, lng: -0.136799}
-const ArtilleryRow = {lat: 51.496422, lng: -0.135673}
-const FrancisStreet = {lat: 51.495283, lng: -0.138347}
-const SpenserSt = {lat: 51.497923, lng: -0.136431}
-const VandonSt = {lat: 51.498753, lng: -0.136759}
-const QueenAnneGate = {lat: 51.500546, lng: -0.133356}
-const PalaceSt = {lat: 51.499074, lng: -0.142662}
-const Warwichrow = {lat: 51.498402, lng: -0.142873}
-const StaffordPlace = {lat: 51.499522, lng: -0.141418}
-const YeomanRow = {lat: 51.497041, lng: -0.166462}
+const ScotlandYard = {lat: 51.50612 , lng:-0.12565, radius:30 }
+const KoreanCC = {lat: 51.50697,lng: -0.12499, radius:20}
+const CraigCt = {lat: 51.50671, lng: -0.12704, radius:50}
+const QueenElizabethCentre = {lat: 51.50053, lng:-0.12907, radius:40}
+const MargaretChurch = {lat: 51.50012, lng:-0.12626, radius:40}
+const TescoExpress = {lat: 51.50132, lng:-0.12484, radius:60}
+const GeorgeStreet = {lat: 51.50114, lng:-0.12804, radius:30}
+const OldQueenSt = {lat: 51.50078, lng:-0.13049, radius:30}
+const Broadway = {lat: 51.49967, lng:-0.13306, radius:10}
+const TheSanctuary = {lat: 51.49941, lng:-0.12937, radius:10}
+const PalmerSt = {lat: 51.49794, lng: -0.13540, radius:10}
+const B323St = {lat: 51.49764, lng: -0.13571, radius:10}
+const StMatthewSt = {lat: 51.4975, lng: -0.1333, radius:40}
+const RochesterRow = {lat: 51.496308,lng: -0.134781, radius:10}
+const GreatSmithSt = {lat: 51.498083,lng: -0.129897, radius:10}
+const GreatPeterSt = {lat: 51.496965,lng: -0.125598, radius:15}
+const TuftonSt = {lat: 51.496588,lng: -0.128445, radius:15}
+const BennettYard = {lat: 51.496046, lng: -0.128528, radius:18}
+const SmithSquare = {lat: 51.495759, lng: -0.126720, radius:10}
+const RomneySt = {lat: 51.495309, lng: -0.128019, radius:10}
+const HorseferryRoad = {lat: 51.494866, lng: -0.129485, radius:20}
+const MedwaySt = {lat: 51.495421, lng: -0.130969, radius:25}
+const ChadwichStreet = {lat: 51.496606, lng: -0.132080, radius:25}
+const PageStreet = {lat: 51.493996, lng:-0.126793, radius:40}
+const MaunselSt = {lat: 51.494517, lng: -0.132976, radius:20}
+const RochesterSt = {lat: 51.495079, lng: -0.134605, radius:10}
+const VincentSt = {lat: 51.492958, lng: -0.131147, radius:30}
+const HatherleySt = {lat: 51.492964, lng: -0.137797, radius:10}
+const DouglasStreet = {lat: 51.491329, lng: -0.133512, radius:10}
+const Millbank = {lat:51.491832, lng: -0.125412, radius:20};
+const BessboroughGardens = {lat: 51.488892, lng: -0.129819, radius:30};
+const VictoriaSquare = {lat: 51.497790, lng: -0.144900, radius:20};
+const LowerGrosvenorPlace = {lat: 51.496846, lng: -0.141836, radius:45}
+const KingsScholarsPassage = {lat: 51.495889, lng:-0.141602, radius:30}
+const AshleyPl = {lat: 51.496255, lng: -0.140257, radius:20}
+const AmbrosdenAvenue = {lat: 51.496387, lng: -0.139407, radius:10}
+const thirlebyrd = {lat: 51.496364, lng: -0.138538, radius:10}
+const howichplace = {lat: 51.496783, lng: -0.136799, radius:90}
+const ArtilleryRow = {lat: 51.496422, lng: -0.135673, radius:30}
+const FrancisStreet = {lat: 51.495283, lng: -0.138347, radius:20}
+const SpenserSt = {lat: 51.497923, lng: -0.136431, radius:30}
+const VandonSt = {lat: 51.498753, lng: -0.136759, radius:20}
+const QueenAnneGate = {lat: 51.500546, lng: -0.133356, radius:10}
+const PalaceSt = {lat: 51.499074, lng: -0.142662, radius:20}
+const Warwichrow = {lat: 51.498402, lng: -0.142873, radius:30}
+const StaffordPlace = {lat: 51.499522, lng: -0.141418, radius:40}
+const YeomanRow = {lat: 51.497041, lng: -0.166462, radius:10}
 
 //Robbery/Burglary/Shoplifting (Orange/Amber)
-const HorseGuardsAve  ={lat:51.50500, lng: -0.12481}
-const MatthewParkerSt = {lat:51.50032, lng:-0.13034}
-const CaxtonSt = {lat: 51.49843, lng: -0.13591}
-const B323 = {lat: 51.49736, lng: -0.13567}
-const SaintMatthewSt = {lat: 51.496899,lng: -0.133187}
-const MonckStreet = {lat: 51.495408, lng: -0.130747}
-const HidePlace = {lat: 51.492091, lng: -0.133685}
-const WillowPlace = {lat: 51.493132, lng: -0.137973}
-const DouglasSt = {lat: 51.491377, lng: -0.133639}
-const BeestonPlace = {lat: 51.497926, lng:-0.145605}
-const VictoriaSqr = {lat: 51.497987,lng: - 0.144777}
-const AllingtonSt = {lat: 51.496806, lng: -0.142958}
-const VauxhallBridgeRd = {lat: 51.496271, lng: -0.142462}
-const AmbrosdenAve = {lat: 51.496349, lng: -0.139490}
-const HowichPlace = {lat:51.496689, lng: -0.137099}
-const StillingtonSt = {lat: 51.494555, lng: -0.138282}
-const CardinalWalk = {lat: 51.498009, lng: -0.140239}
-const WarwichRow = {lat: 51.498428, lng:-0.142855}
+const HorseGuardsAve  ={lat:51.50500, lng: -0.12481, radius: 50}
+const MatthewParkerSt = {lat:51.50032, lng:-0.13034, radius:20}
+const CaxtonSt = {lat: 51.49843, lng: -0.13591, radius:15}
+const B323 = {lat: 51.49736, lng: -0.13567, radius:10}
+const SaintMatthewSt = {lat: 51.496899,lng: -0.133187, radius:10}
+const MonckStreet = {lat: 51.495408, lng: -0.130747, radius:15}
+const HidePlace = {lat: 51.492091, lng: -0.133685, radius:15}
+const WillowPlace = {lat: 51.493132, lng: -0.137973, radius:10}
+const DouglasSt = {lat: 51.491377, lng: -0.133639, radius:30}
+const BeestonPlace = {lat: 51.497926, lng:-0.145605, radius:20}
+const VictoriaSqr = {lat: 51.497987,lng: - 0.144777, radius:20}
+const AllingtonSt = {lat: 51.496806, lng: -0.142958, radius:10}
+const VauxhallBridgeRd = {lat: 51.496271, lng: -0.142462, radius:25}
+const AmbrosdenAve = {lat: 51.496349, lng: -0.139490, radius:10}
+const HowichPlace = {lat:51.496689, lng: -0.137099, radius:100}
+const StillingtonSt = {lat: 51.494555, lng: -0.138282, radius:10}
+const CardinalWalk = {lat: 51.498009, lng: -0.140239, radius:30}
+const WarwichRow = {lat: 51.498428, lng:-0.142855, radius:15}
 
 //Vehicle crime (Purple)
-const DacreSreet = {lat: 51.49894, lng: -0.13287}
-const MonckSt = {lat: 51.496294, lng: -0.130817}
-const RutherfordSt = {lat: 51.494081, lng:-0.132844}
-const EsterbrookeSt = {lat: 51.491998, lng: -0.132809}
-const PonsonbyPlace = {lat: 51.490199, lng: -0.130802}
-const ThirlebyRd = {lat: 51.496344, lng: -0.138701}
-const HowichPl = {lat: 51.496677, lng: -0.137328}
+const DacreSreet = {lat: 51.49894, lng: -0.13287, radius:10}
+const MonckSt = {lat: 51.496294, lng: -0.130817, radius:20}
+const RutherfordSt = {lat: 51.494081, lng:-0.132844, radius:20}
+const EsterbrookeSt = {lat: 51.491998, lng: -0.132809, radius:20}
+const PonsonbyPlace = {lat: 51.490199, lng: -0.130802, radius:20}
+const ThirlebyRd = {lat: 51.496344, lng: -0.138701, radius:10}
+const HowichPl = {lat: 51.496677, lng: -0.137328, radius:30}
 //Scams (Yellow)
-const WestminsterBridge = {lat: 51.500871, lng: -0.122025}
+const WestminsterBridge = {lat: 51.500871, lng: -0.122025, radius:100}
 
 // Kensington And Chelsea
 
 //Violence (RED)
-const OvingtonMews = {lat: 51.497801, lng: -0.165987}
-const EgertonGardensMews = {lat: 51.496971, lng: -0.167552}
-const HaskerStreet = {lat: 51.494559, lng: -0.164822}
-const CadoganGate = {lat: 51.494537, lng: -0.158688}
-const RawlingsSt = {lat: 51.493170, lng: -0.163328}
-const DraycottAve = {lat: 51.492443, lng: -0.164563}
-const MakinsSt = {lat: 51.492144, lng: -0.166630}
-const IxworthPlace = {lat:51.491883, lng: -0.168751}
-const BuryWalk = {lat: 51.491314, lng: -0.171191}
-const DanuseSt = {lat: 51.490201, lng: -0.167067}
-const CaleSt = {lat: 51.490142, lng: -0.170399}
-const FloodWalk = {lat: 51.486593, lng: -0.166984}
-const roalhospitalroad = {lat: 51.484959, lng: -0.162886}
-const PetytPlace = {lat: 51.483023, lng: -0.171458}
-const DanversSt = {lat: 51.482906, lng: -0.172499}
-const CarlyleSquare = {lat: 51.486648, lng: -0.172969}
-const ElmParkGardens = {lat: 51.487232, lng: -0.177330}
-const kingsrd = {lat: 51.485102, lng: -0.174481}
-const PeonyCourt = {lat: 51.486211, lng: -0.179851}
-const ChelseaParkGardens = {lat: 51.485217, lng: -0.177765}
-const BeaufordStreet = {lat: 51.484544, lng: -0.175621}
-const lamontroadpassage = {lat: 51.483899, lng: -0.176918}
-const LimerstonStreet = {lat: 51.484386, lng: -0.179350}
-const NightingalePl = {lat: 51.484519, lng: -0.180736}
-const LangtonSt = {lat: 51.482440, lng: -0.180627}
-const RileySt = {lat: 51.481952, lng: -0.176829}
-const AnnLane = {lat: 51.482614, lng: -0.177716}
-const EdithGroveCarPark = {lat: 51.480378, lng: -0.179936}
-const ChelseaTheatre = {lat: 51.48165,lng: -0.17977}
+const OvingtonMews = {lat: 51.497801, lng: -0.165987, radius:10}
+const EgertonGardensMews = {lat: 51.496971, lng: -0.167552, radius:10}
+const HaskerStreet = {lat: 51.494559, lng: -0.164822, radius:10}
+const CadoganGate = {lat: 51.494537, lng: -0.158688, radius:10}
+const RawlingsSt = {lat: 51.493170, lng: -0.163328, radius:20}
+const DraycottAve = {lat: 51.492443, lng: -0.164563, radius:15}
+const MakinsSt = {lat: 51.492144, lng: -0.166630, radius:15}
+const IxworthPlace = {lat:51.491883, lng: -0.168751, radius:10}
+const BuryWalk = {lat: 51.491314, lng: -0.171191, radius:20}
+const DanuseSt = {lat: 51.490201, lng: -0.167067, radius:10}
+const CaleSt = {lat: 51.490142, lng: -0.170399, radius:10}
+const FloodWalk = {lat: 51.486593, lng: -0.166984, radius:25}
+const roalhospitalroad = {lat: 51.484959, lng: -0.162886, radius:10}
+const PetytPlace = {lat: 51.483023, lng: -0.171458, radius:10}
+const DanversSt = {lat: 51.482906, lng: -0.172499, radius:10}
+const CarlyleSquare = {lat: 51.486648, lng: -0.172969, radius:10}
+const ElmParkGardens = {lat: 51.487232, lng: -0.177330, radius:10}
+const kingsrd = {lat: 51.485102, lng: -0.174481, radius:10}
+const PeonyCourt = {lat: 51.486211, lng: -0.179851, radius:15}
+const ChelseaParkGardens = {lat: 51.485217, lng: -0.177765, radius:10}
+const BeaufordStreet = {lat: 51.484544, lng: -0.175621, radius:10}
+const lamontroadpassage = {lat: 51.483899, lng: -0.176918, radius:10}
+const LimerstonStreet = {lat: 51.484386, lng: -0.179350, radius:10}
+const NightingalePl = {lat: 51.484519, lng: -0.180736, radius:10}
+const LangtonSt = {lat: 51.482440, lng: -0.180627, radius:10}
+const RileySt = {lat: 51.481952, lng: -0.176829, radius:10}
+const AnnLane = {lat: 51.482614, lng: -0.177716, radius:15}
+const EdithGroveCarPark = {lat: 51.480378, lng: -0.179936, radius:10}
+const ChelseaTheatre = {lat: 51.48165,lng: -0.17977, radius:20}
+const edithgrove = {lat: 51.481790, lng: -0.181630, radius:10}
+const lotsrd = {lat: 51.480159, lng: -0.185582, radius:10}
+const ThorndickCl = {lat: 51.480502, lng: -0.184263, radius:15}
+const fullhamroad = {lat: 51.483044, lng: -0.185802, radius:15}
 //Theft (Lime)
-const EgertonTerrace = {lat: 51.497004, lng:-0.168021}
-const FirstSt = {lat: 51.495003, lng: -0.165864}
-const CrescentPl = {lat: 51.494492, lng: -0.168298}
-const ClabonMews = {lat: 51.495061, lng: -0.161870}
-const PavilionRd = {lat: 51.494333, lng: -0.159004}
-const CadoganStreet = {lat: 51.493372, lng: -0.161631}
-const DraycottTerrace = {lat: 51.492616, lng: -0.160657}
-const culfordgardens = {lat: 51.491954, lng: -0.160568}
-const SymonsSt = {lat: 51.492464, lng: -0.159449}
-const A3216 = {lat: 51.492721, lng: -0.156835}
-const SaatchiGallery = {lat: 51.491039, lng: -0.158560}
-const parkingarea = {lat: 51.490514, lng: -0.161048}
-const MarkhamSquare = {lat: 51.490054, lng: -0.164922}
-const CaleStreet = {lat: 51.490092, lng: -0.170533}
-const wellingtonsquare = {lat: 51.489579, lng: -0.163216}
-const ManresaRd = {lat: 51.487463, lng: -0.171406}
-const KingsRd = {lat: 51.487370, lng: -0.168958}
-const OakleyGardens = {lat: 51.485388, lng: -0.167115}
-const StLooAve = {lat: 51.485087, lng: -0.164984}
-const eastroad = {lat: 51.488180, lng: -0.156784}
-const ElmParkRd = {lat: 51.486212, lng: -0.177255}
-const MulberryWalk = {lat: 51.486004, lng: -0.175742}
-const ParkWalk = {lat: 51.486045, lng: -0.180261}
-const beaufortst = {lat: 51.484708, lng: -0.175972}
-const MoravianPl = {lat: 51.482578, lng: -0.175882}
-const annlane = {lat: 51.482541, lng: -0.177908}
-const EdithYard = {lat: 51.481527, lng: -0.180572}
+const EgertonTerrace = {lat: 51.497004, lng:-0.168021, radius:10}
+const FirstSt = {lat: 51.495003, lng: -0.165864, radius:15}
+const CrescentPl = {lat: 51.494492, lng: -0.168298, radius:20}
+const ClabonMews = {lat: 51.495061, lng: -0.161870, radius:10}
+const PavilionRd = {lat: 51.494333, lng: -0.159004, radius:10}
+const CadoganStreet = {lat: 51.493372, lng: -0.161631, radius:10}
+const DraycottTerrace = {lat: 51.492616, lng: -0.160657, radius:10}
+const culfordgardens = {lat: 51.491954, lng: -0.160568, radius:15}
+const SymonsSt = {lat: 51.492464, lng: -0.159449, radius:25}
+const A3216 = {lat: 51.492721, lng: -0.156835, radius:15}
+const SaatchiGallery = {lat: 51.491039, lng: -0.158560, radius:40}
+const parkingarea = {lat: 51.490514, lng: -0.161048, radius:20}
+const MarkhamSquare = {lat: 51.490054, lng: -0.164922, radius:10}
+const CaleStreet = {lat: 51.490092, lng: -0.170533, radius:15}
+const wellingtonsquare = {lat: 51.489579, lng: -0.163216, radius:10}
+const ManresaRd = {lat: 51.487463, lng: -0.171406, radius:10}
+const KingsRd = {lat: 51.487370, lng: -0.168958, radius:25}
+const OakleyGardens = {lat: 51.485388, lng: -0.167115, radius:10}
+const StLooAve = {lat: 51.485087, lng: -0.164984, radius:10}
+const eastroad = {lat: 51.488180, lng: -0.156784, radius:10}
+const ElmParkRd = {lat: 51.486212, lng: -0.177255, radius:10}
+const MulberryWalk = {lat: 51.486004, lng: -0.175742, radius:10}
+const ParkWalk = {lat: 51.486045, lng: -0.180261, radius:10}
+const beaufortst = {lat: 51.484708, lng: -0.175972, radius:10}
+const MoravianPl = {lat: 51.482578, lng: -0.175882, radius:10}
+const annlane = {lat: 51.482541, lng: -0.177908, radius:10}
+const EdithYard = {lat: 51.481527, lng: -0.180572, radius:10}
+const AshburnhamRoad = {lat: 51.479920, lng: -0.181066, radius:10}
+const thorndickcl = {lat: 51.480531, lng: -0.184145, radius:10}
+const FullhamRoad = {lat: 51.48274, lng: -0.18615, radius:30}
 //Robbery/Burglary/Shoplifting (Orange/Amber)
-const BeauchampPlace = {lat: 51.497393, lng: -0.164317}
-const WaltonStreet = {lat: 51.495586, lng: -0.165685}
-const MilnerSt = {lat: 51.494328, lng: -0.163893}
-const PavilionSt = {lat: 51.496797, lng: -0.159499}
-const CadoganSt = {lat: 51.493447, lng: -0.161218}
-const SloaneAvenue = {lat: 51.491994, lng: -0.164937}
-const burywalk = {lat: 51.491378, lng: -0.171252}
-const LincolnSt = {lat:51.491321, lng: -0.161242}
-const CulfordGardens = {lat: 51.491843, lng: -0.160803}
-const SymonsStreet = {lat: 51.492524, lng: -0.159197}
-const ParkingArea = {lat: 51.490471, lng: -0.161031}
-const CoulsonSt = {lat: 51.490956, lng: -0.162167}
-const BywaterSt = {lat: 51.490092, lng: -0.163832}
-const DanuseStreet = {lat: 51.490140, lng: -0.167058}
-const SParade = {lat: 51.489183, lng: -0.174755}
-const DovehouseSt = {lat: 51.488955, lng: -0.171503}
-const TheTrafalgar = {lat: 51.48857, lng:-0.16701}
-const MarksAndSpencer = {lat: 51.48895,lng: -0.16470}
-const WoodfallSt = {lat: 51.488513, lng: -0.162567}
-const StLeonardsTerrace = {lat: 51.488754, lng: -0.160931}
-const ChelseaManorGardens = {lat: 51.486613, lng: -0.168426}
-const CheyneWalk = {lat: 51.483683, lng: -0.166591}
-const EastRoad = {lat: 51.488214, lng: -0.156857}
-const PaultonsSquare = {lat: 51.484193, lng: -0.173104}
-const MallordSt = {lat: 51.485938, lng: -0.174194}
-const KingsRoad = {lat: 51.485058, lng: -0.174578}
-const FullhamRd = {lat: 51.486342, lng: -0.180217}
-const WintertonPlace = {lat: 51.485352, lng: -0.180164}
-const SlaidburnSt = {lat: 51.482390, lng: -0.181394}
-const BlantyreStreet = {lat: 51.481524, lng: -0.178327}
+const BeauchampPlace = {lat: 51.497393, lng: -0.164317, radius:10}
+const WaltonStreet = {lat: 51.495586, lng: -0.165685, radius:15}
+const MilnerSt = {lat: 51.494328, lng: -0.163893, radius:10}
+const PavilionSt = {lat: 51.496797, lng: -0.159499, radius:10}
+const CadoganSt = {lat: 51.493447, lng: -0.161218, radius:10}
+const SloaneAvenue = {lat: 51.491994, lng: -0.164937, radius:10}
+const burywalk = {lat: 51.491378, lng: -0.171252, radius:10}
+const LincolnSt = {lat:51.491321, lng: -0.161242, radius:10}
+const CulfordGardens = {lat: 51.491843, lng: -0.160803, radius:15}
+const SymonsStreet = {lat: 51.492524, lng: -0.159197, radius:20}
+const ParkingArea = {lat: 51.490471, lng: -0.161031, radius:30}
+const CoulsonSt = {lat: 51.490956, lng: -0.162167, radius:10}
+const BywaterSt = {lat: 51.490092, lng: -0.163832, radius:10}
+const DanuseStreet = {lat: 51.490140, lng: -0.167058, radius:10}
+const SParade = {lat: 51.489183, lng: -0.174755, radius:10}
+const DovehouseSt = {lat: 51.488955, lng: -0.171503, radius:10}
+const TheTrafalgar = {lat: 51.48857, lng:-0.16701, radius:30}
+const MarksAndSpencer = {lat: 51.48895,lng: -0.16470, radius:20}
+const WoodfallSt = {lat: 51.488513, lng: -0.162567, radius:10}
+const StLeonardsTerrace = {lat: 51.488754, lng: -0.160931, radius:10}
+const ChelseaManorGardens = {lat: 51.486613, lng: -0.168426, radius:10}
+const CheyneWalk = {lat: 51.483683, lng: -0.166591, radius:10}
+const EastRoad = {lat: 51.488214, lng: -0.156857, radius:10}
+const PaultonsSquare = {lat: 51.484193, lng: -0.173104, radius:10}
+const MallordSt = {lat: 51.485938, lng: -0.174194, radius:10}
+const KingsRoad = {lat: 51.485058, lng: -0.174578, radius:15}
+const FullhamRd = {lat: 51.486342, lng: -0.180217, radius:10}
+const WintertonPlace = {lat: 51.485352, lng: -0.180164, radius:10}
+const SlaidburnSt = {lat: 51.482390, lng: -0.181394, radius:10}
+const BlantyreStreet = {lat: 51.481524, lng: -0.178327, radius:10}
+const EdithGrove = {lat: 51.481945, lng: -0.181802, radius:10}
+const upcernerd = {lat: 51.479163, lng: -0.183178, radius:10}
+const hortensiaroad = {lat: 51.482588, lng: -0.186166, radius:20}
 //Vehicle crime (Purple)
-const BeauchampPl = {lat: 51.496964, lng: -0.163356}
-const EgertonGardens = {lat: 51.496778, lng: -0.167996}
-const EgertonGardens_two = {lat: 51.495638, lng: -0.168404}
-const OvingstonStreet = {lat: 51.495813, lng: -0.165249}
-const CrescentPlace = {lat: 51.494493, lng: -0.168153}
-const HalseySt = {lat: 51.494375, lng: -0.163276}
-const MilnerStreet = {lat: 51.494884, lng: -0.161753}
-const ShafloMews = {lat: 51.496332, lng: -0.161021}
-const CadoganGardens = {lat: 51.492660, lng: -0.160315}
-const DraycottAvenue = {lat: 51.492478, lng: -0.164651}
-const SloaneAve = {lat: 51.491833, lng: -0.164570}
-const SprimontPl = {lat: 51.490914, lng: -0.164573}
-const JubileePl = {lat: 51.489498, lng: -0.166167}
-const WellingtonSquare = {lat: 51.489547, lng: -0.163095}
-const DovehouseStreet = {lat: 51.488786, lng: -0.171348}
-const stleonardsterrace = {lat: 51.488812, lng: -0.160852}
-const ManresaRoad = {lat: 51.487419, lng: -0.171367}
-const CheyneGardens = {lat: 51.484388, lng: -0.165688}
-const RoyalHospitalRoad = {lat: 51.484895, lng: -0.162965}
-const ParadiseWalk = {lat: 51.485147, lng: -0.160781}
-const FranklinsRow = {lat: 51.489218, lng: -0.158497}
-const SloaneCourtWest = {lat: 51.489998, lng: -0.157125}
-const LordshipPl = {lat: 51.483620, lng: -0.169996}
-const OldChurchStreet = {lat: 51.486598, lng: -0.173539}
-const elmparkgarndens = {lat: 51.487124, lng: -0.177274}
-const kingsroad = {lat: 51.485030, lng: -0.174527}
-const parkwalk = {lat: 51.484913, lng: -0.178669}
-const BeaufortSt = {lat: 51.484555, lng: -0.175819}
-const LamontRoadPassage = {lat: 51.483840, lng: -0.177209}
-const limerstonstreet = {lat: 51.484193, lng: -0.179150}
-const GertrudeStreet = {lat: 51.483486, lng: -0.180667}
-const LamontRoad = {lat: 51.482759, lng: -0.179820}
-const LangtonStreet = {lat: 51.482484, lng: -0.180696}
+const BeauchampPl = {lat: 51.496964, lng: -0.163356, radius:10}
+const EgertonGardens = {lat: 51.496778, lng: -0.167996, radius:10}
+const EgertonGardens_two = {lat: 51.495638, lng: -0.168404, radius:10}
+const OvingstonStreet = {lat: 51.495813, lng: -0.165249, radius:15}
+const CrescentPlace = {lat: 51.494493, lng: -0.168153, radius:10}
+const HalseySt = {lat: 51.494375, lng: -0.163276, radius:10}
+const MilnerStreet = {lat: 51.494884, lng: -0.161753, radius:20}
+const ShafloMews = {lat: 51.496332, lng: -0.161021, radius:10}
+const CadoganGardens = {lat: 51.492660, lng: -0.160315, radius:10}
+const DraycottAvenue = {lat: 51.492478, lng: -0.164651, radius:10}
+const SloaneAve = {lat: 51.491833, lng: -0.164570, radius:15}
+const SprimontPl = {lat: 51.490914, lng: -0.164573, radius:10}
+const JubileePl = {lat: 51.489498, lng: -0.166167, radius:10}
+const WellingtonSquare = {lat: 51.489547, lng: -0.163095, radius:10}
+const DovehouseStreet = {lat: 51.488786, lng: -0.171348, radius:10}
+const stleonardsterrace = {lat: 51.488812, lng: -0.160852, radius:10}
+const ManresaRoad = {lat: 51.487419, lng: -0.171367, radius:10}
+const CheyneGardens = {lat: 51.484388, lng: -0.165688, radius:10}
+const RoyalHospitalRoad = {lat: 51.484895, lng: -0.162965, radius:10}
+const ParadiseWalk = {lat: 51.485147, lng: -0.160781, radius:10}
+const FranklinsRow = {lat: 51.489218, lng: -0.158497, radius:10}
+const SloaneCourtWest = {lat: 51.489998, lng: -0.157125, radius:10}
+const LordshipPl = {lat: 51.483620, lng: -0.169996, radius:10}
+const OldChurchStreet = {lat: 51.486598, lng: -0.173539, radius:10}
+const elmparkgarndens = {lat: 51.487124, lng: -0.177274, radius:10}
+const kingsroad = {lat: 51.485030, lng: -0.174527, radius:10}
+const parkwalk = {lat: 51.484913, lng: -0.178669, radius:10}
+const BeaufortSt = {lat: 51.484555, lng: -0.175819, radius:15}
+const LamontRoadPassage = {lat: 51.483840, lng: -0.177209, radius:10}
+const limerstonstreet = {lat: 51.484193, lng: -0.179150, radius:10}
+const GertrudeStreet = {lat: 51.483486, lng: -0.180667, radius:10}
+const LamontRoad = {lat: 51.482759, lng: -0.179820, radius:10}
+const LangtonStreet = {lat: 51.482484, lng: -0.180696, radius:15}
+const TademaRoad = {lat: 51.479843, lng: -0.182148, radius:10}
+const UpcerneRd = {lat: 51.478897, lng: -0.182988, radius:10}
+const LotsRd = {lat: 51.479102, lng: -0.184726, radius:10}
+const HortensiaRd = {lat: 51.481244, lng: -0.184550, radius:10}
 //Scams (Yellow)
+const DaycottsApartments = {lat:51.491657, lng: -0.162303, radius:10}
+const IvyChelseaGarden = {lat:51.48707, lng: -0.16938, radius:10}
+const sloaneave = {lat: 51.49240, lng: -0.16571, radius:20}
+const RoyalHospitalRd = {lat: 51.486650, lng: -0.160469, radius:15}
+
 
 
 function App() {
@@ -318,22 +337,319 @@ const {isLoaded} = useJsApiLoader({
 
     });
   
-    //check if route enters with horseGuardes ave circle test
+    //check if route enters any circles
     const routeCoordinates = results.routes[0].overview_path;
-    const circleCenter = new google.maps.LatLng(HorseGuardsAve.lat,HorseGuardsAve.lng);
-    const circleRadius = 50;
+    // const circleCenter = new google.maps.LatLng(HorseGuardsAve.lat,HorseGuardsAve.lng);
+    // const circleRadius = 50;
+    // const Violence = 0;
+    // const Theft = 0;
+    // const RBS = 0;
+    // const VehicleCrimes = 0;
+    // const Scams = 0;
+    //Locations
+    //Violence 
+    // const ViolenceLocations = {WhitehallCt: {lat: WhitehallCt.lat,lng: WhitehallCt.lng, radius: WhitehallCt.radius},
+    // WestminsterPier: {lat: WestminsterPier.lat, lng: WestminsterPier.lng, radius: WestminsterPier.radius},
+    // WestminsterArms: {lat: WestminsterArms.lat, lng: WestminsterArms.lng, radius: WestminsterArms.radius},
+    // CarteretSt: {lat: CarteretSt.lat, lng: CarteretSt.lng, radius: CarteretSt.radius},
+    // DacreSt: {lat: DacreSt.lat,lng: DacreSt.lng, radius: DacreSt.radius},
+    // StarbucksCoffee: {lat: StarbucksCoffee.lat, lng: StarbucksCoffee.lng,radius:StarbucksCoffee.radius},
+    // VictoriaSt: {lat: VictoriaSt.lat, lng: VictoriaSt.lng,radius:VictoriaSt.radius},
+    // OldPyeSt: {lat: OldPyeSt.lat, lng: OldPyeSt.lng,radius:OldPyeSt.radius},
+    // StMatthewStreet: {lat: StMatthewStreet.lat, lng: StMatthewStreet.lng,radius:StMatthewStreet.radius},
+    // GreycoatPlace: {lat: GreycoatPlace.lat, lng: GreycoatPlace.lng,radius:GreycoatPlace.radius},
+    // GreatPeterStreet: {lat: GreatPeterStreet.lat, lng: GreatPeterStreet.lng,radius:GreatPeterStreet.radius},
+    // DeanTrenchSt: {lat: DeanTrenchSt.lat, lng: DeanTrenchSt.lng,radius:DeanTrenchSt.radius},
+    // HorseferryRd: {lat: HorseferryRd.lat, lng: HorseferryRd.lng,radius:HorseferryRd.radius},
+    // ArnewaySt: {lat: ArnewaySt.lat, lng: ArnewaySt.lng,radius:ArnewaySt.radius},
+    // ChadwichSt: {lat: ChadwichSt.lat, lng: ChadwichSt.lng,radius:ChadwichSt.radius},
+    // ThorneySt: {lat: ThorneySt.lat, lng: ThorneySt.lng,radius:ThorneySt.radius},
+    // PageSt: {lat: PageSt.lat, lng: PageSt.lng,radius:PageSt.radius},
+    // RegencySt: {lat: RegencySt.lat, lng: RegencySt.lng,radius:RegencySt.radius},
+    // VincentStreet: {lat: VincentStreet.lat, lng: VincentStreet.lng,radius:VincentStreet.radius},
+    // RegencyStreet: {lat: RegencyStreet.lat, lng: RegencyStreet.lng,radius:RegencyStreet.radius},
+    // WalcottSt: {lat: WalcottSt.lat, lng: WalcottSt.lng,radius:WalcottSt.radius},
+    // VauxhallBridgeRoad: {lat: VauxhallBridgeRoad.lat, lng: VauxhallBridgeRoad.lng,radius:VauxhallBridgeRoad.radius},
+    // HatherleyStreet: {lat: HatherleyStreet.lat, lng: HatherleyStreet.lng,radius:HatherleyStreet.radius},
+    // HerrickSt: {lat: HerrickSt.lat, lng: HerrickSt.lng,radius:HerrickSt.radius},
+    // CuretonSt: {lat: CuretonSt.lat, lng: CuretonSt.lng,radius:CuretonSt.radius},
+    // AtterburySt: {lat: AtterburySt.lat, lng: AtterburySt.lng,radius:AtterburySt.radius},
+    // VictoriaStreet: {lat: VictoriaStreet.lat, lng: VictoriaStreet.lng,radius:VictoriaStreet.radius}, 
+    // ThirlebyRoad: {lat: ThirlebyRoad.lat, lng: ThirlebyRoad.lng,radius:ThirlebyRoad.radius},
+    // GreencoatRow: {lat: GreencoatRow.lat, lng: GreencoatRow.lng,radius:GreencoatRow.radius},
+    // FrancisSt: {lat: FrancisSt.lat, lng: FrancisSt.lng,radius:FrancisSt.radius},
+    // MorpethTerrace: {lat: MorpethTerrace.lat, lng: MorpethTerrace.lng,radius:MorpethTerrace.radius},
+    // StillingtonStreet: {lat: StillingtonStreet.lat, lng: StillingtonStreet.lng,radius:StillingtonStreet.radius},
+    // SpenserStreet: {lat: SpenserStreet.lat, lng: SpenserStreet.lng,radius:SpenserStreet.radius},
+    // VandonStreet: {lat: VandonStreet.lat, lng: VandonStreet.lng,radius:VandonStreet.radius},
+    // BuckinghamGate: {lat: BuckinghamGate.lat, lng: BuckinghamGate.lng,radius:BuckinghamGate.radius},
+    // PalaceStreet: {lat: PalaceStreet.lat, lng: PalaceStreet.lng,radius:PalaceStreet.radius},
+    // ParliamentSt: {lat: ParliamentSt.lat, lng: ParliamentSt.lng,radius:ParliamentSt.radius},
+    // OvingtonMews: {lat: OvingtonMews.lat, lng: OvingtonMews.lng,radius:OvingtonMews.radius},
+    // EgertonGardensMews: {lat: EgertonGardensMews.lat, lng: EgertonGardensMews.lng,radius:EgertonGardensMews.radius},
+    // HaskerStreet: {lat: HaskerStreet.lat, lng: HaskerStreet.lng,radius:HaskerStreet.radius},
+    // CadoganGate: {lat: CadoganGate.lat, lng: CadoganGate.lng,radius:CadoganGate.radius},
+    // RawlingsSt: {lat: RawlingsSt.lat, lng: RawlingsSt.lng,radius:RawlingsSt.radius},
+    // DraycottAve: {lat: DraycottAve.lat, lng: DraycottAve.lng,radius:DraycottAve.radius},
+    // MakinsSt: {lat: MakinsSt.lat, lng: MakinsSt.lng,radius:MakinsSt.radius},
+    // IxworthPlace: {lat: IxworthPlace.lat, lng: IxworthPlace.lng,radius:IxworthPlace.radius},
+    // BuryWalk: {lat: BuryWalk.lat, lng: BuryWalk.lng,radius:BuryWalk.radius},
+    // DanuseSt: {lat: DanuseSt.lat, lng: DanuseSt.lng,radius:DanuseSt.radius},
+    // CaleSt: {lat: CaleSt.lat, lng: CaleSt.lng,radius:CaleSt.radius},
+    // FloodWalk: {lat: FloodWalk.lat, lng: FloodWalk.lng,radius:FloodWalk.radius},
+    // roalhospitalroad: {lat: roalhospitalroad.lat, lng: roalhospitalroad.lng,radius:roalhospitalroad.radius},
+    // PetytPlace: {lat: PetytPlace.lat, lng: PetytPlace.lng,radius:PetytPlace.radius},
+    // DanversSt: {lat: DanversSt.lat, lng: DanversSt.lng,radius:DanversSt.radius},
+    // CarlyleSquare: {lat: CarlyleSquare.lat, lng: CarlyleSquare.lng,radius:CarlyleSquare.radius},
+    // ElmParkGardens: {lat: ElmParkGardens.lat, lng: ElmParkGardens.lng,radius:ElmParkGardens.radius},
+    // kingsrd: {lat: kingsrd.lat, lng: kingsrd.lng,radius:kingsrd.radius},
+    // KingsRd: {lat: KingsRd.lat, lng: KingsRd.lng,radius:15},
+    // PeonyCourt: {lat: PeonyCourt.lat, lng: PeonyCourt.lng,radius:PeonyCourt.radius},
+    // ChelseaParkGardens: {lat: ChelseaParkGardens.lat, lng: ChelseaParkGardens.lng,radius:ChelseaParkGardens.radius},
+    // BeaufordStreet: {lat: BeaufordStreet.lat, lng: BeaufordStreet.lng,radius:BeaufordStreet.radius},
+    // lamontroadpassage: {lat: lamontroadpassage.lat, lng: lamontroadpassage.lng,radius:lamontroadpassage.radius},
+    // LimerstonStreet: {lat: LimerstonStreet.lat, lng: LimerstonStreet.lng,radius:LimerstonStreet.radius},
+    // NightingalePl: {lat: NightingalePl.lat, lng: NightingalePl.lng,radius: NightingalePl.radius},
+    // LangtonSt: {lat: LangtonSt.lat, lng: LangtonSt.lng,radius:LangtonSt.radius},
+    // RileySt: {lat: RileySt.lat, lng: RileySt.lng,radius:RileySt.radius},
+    // AnnLane: {lat: AnnLane.lat, lng: AnnLane.lng,radius:AnnLane.radius},
+    // EdithGroveCarPark: {lat: EdithGroveCarPark.lat, lng: EdithGroveCarPark.lng,radius:EdithGroveCarPark.radius},
+    // ChelseaTheatre: {lat: ChelseaTheatre.lat, lng: ChelseaTheatre.lng,radius:ChelseaTheatre.radius},
+    // edithgrove: {lat: edithgrove.lat, lng: edithgrove.lng,radius:edithgrove.radius},
+    // lotsrd: {lat: lotsrd.lat, lng: lotsrd.lng,radius:lotsrd.radius},
+    // ThorndickCl: {lat: ThorndickCl.lat, lng: ThorndickCl.lng,radius:ThorndickCl.radius},
+    // fullhamroad: {lat: fullhamroad.lat, lng: fullhamroad.lng,radius:fullhamroad.radius},
+    // TheTrafalgar: {lat:TheTrafalgar.lat,lng: TheTrafalgar.lng,radius:15}
+    // }
+    // Theft
+    const TheftLocations = {ScotlandYard:{lat: ScotlandYard.lat,lng: ScotlandYard.lng, radius: ScotlandYard.radius},
+      KoreanCC:{lat: KoreanCC.lat,lng: KoreanCC.lng, radius: KoreanCC.radius},
+      CraigCt:{lat: CraigCt.lat,lng: CraigCt.lng, radius: CraigCt.radius},
+      QueenElizabethCentre:{lat: QueenElizabethCentre.lat,lng: QueenElizabethCentre.lng, radius: QueenElizabethCentre.radius},
+      MargaretChurch:{lat: MargaretChurch.lat,lng: MargaretChurch.lng, radius: MargaretChurch.radius},
+      TescoExpress:{lat: TescoExpress.lat,lng: TescoExpress.lng, radius: TescoExpress.radius},
+      GeorgeStreet:{lat: GeorgeStreet,lng: GeorgeStreet.lng, radius: GeorgeStreet.radius},
+      OldQueenSt:{lat: OldQueenSt.lat,lng: OldQueenSt.lng, radius: OldQueenSt.radius},
+      Broadway:{lat: Broadway.lat,lng: Broadway.lng, radius: Broadway.radius},
+      TheSanctuary:{lat: TheSanctuary.lat,lng: TheSanctuary.lng, radius: TheSanctuary.radius},
+      PalmerSt:{lat: PalmerSt.lat,lng: PalmerSt.lng, radius: PalmerSt.radius},
+      B323St:{lat: B323St.lat,lng: B323St.lng, radius: B323St.radius},
+      StMatthewSt:{lat: StMatthewSt.lat,lng: StMatthewSt.lng, radius: StMatthewSt.radius},
+      RochesterRow:{lat: RochesterRow.lat,lng: RochesterRow.lng, radius: RochesterRow.radius},
+      GreatSmithSt:{lat: GreatSmithSt.lat,lng: GreatSmithSt.lng, radius: GreatSmithSt.radius},
+      GreatPeterSt:{lat: GreatPeterSt.lat,lng: GreatPeterSt.lng, radius: GreatPeterSt.radius},
+      TuftonSt:{lat: TuftonSt.lat,lng: TuftonSt.lng, radius: TuftonSt.radius},
+      BennettYard:{lat: BennettYard.lat,lng: BennettYard.lng, radius: BennettYard.radius},
+      SmithSquare:{lat: SmithSquare.lat,lng: SmithSquare.lng, radius: SmithSquare.radius},
+      RomneySt:{lat: RomneySt.lat,lng: RomneySt.lng, radius: RomneySt.radius},
+      HorseferryRoad:{lat: HorseferryRoad.lat,lng: HorseferryRoad.lng, radius: HorseferryRoad.radius},
+      MedwaySt:{lat: MedwaySt.lat,lng: MedwaySt.lng, radius: MedwaySt.radius},
+      ChadwichStreet:{lat: ChadwichStreet.lat,lng: ChadwichStreet.lng, radius: ChadwichStreet.radius},
+      PageStreet:{lat: PageStreet.lat,lng: PageStreet.lng, radius: PageStreet.radius},
+      MaunselSt:{lat: MaunselSt.lat,lng: MaunselSt.lng, radius: MaunselSt.radius},
+      RochesterSt:{lat: RochesterSt.lat,lng: RochesterSt.lng, radius: RochesterSt.radius},
+      VincentSt:{lat: VincentSt.lat,lng: VincentSt.lng, radius: VincentSt.radius},
+      HatherleySt:{lat: HatherleySt.lat,lng: HatherleySt.lng, radius: HatherleySt.radius},
+      DouglasStreet:{lat: DouglasStreet.lat,lng: DouglasStreet.lng, radius: DouglasStreet.radius},
+      Millbank:{lat: Millbank.lat,lng: Millbank.lng, radius: Millbank.radius},
+      BessboroughGardens:{lat: BessboroughGardens.lat,lng: BessboroughGardens.lng, radius: BessboroughGardens.radius},
+      VictoriaSquare:{lat: VictoriaSquare.lat,lng: VictoriaSquare.lng, radius: VictoriaSquare.radius},
+      LowerGrosvenorPlace:{lat: LowerGrosvenorPlace.lat,lng: LowerGrosvenorPlace.lng, radius: LowerGrosvenorPlace.radius},
+      KingsScholarsPassage:{lat: KingsScholarsPassage.lat,lng: KingsScholarsPassage.lng, radius: KingsScholarsPassage.radius},
+      AshleyPl:{lat: AshleyPl.lat,lng: AshleyPl.lng, radius: AshleyPl.radius},
+      AmbrosdenAvenue:{lat: AmbrosdenAvenue.lat,lng: AmbrosdenAvenue.lng, radius: AmbrosdenAvenue.radius},
+      thirlebyrd:{lat: thirlebyrd.lat,lng: thirlebyrd.lng, radius: thirlebyrd.radius},
+      howichplace:{lat: howichplace.lat,lng: howichplace.lng, radius: howichplace.radius},
+      ArtilleryRow:{lat: ArtilleryRow.lat,lng: ArtilleryRow.lng, radius: ArtilleryRow.radius},
+      FrancisStreet:{lat: FrancisStreet.lat,lng: FrancisStreet.lng, radius: FrancisStreet.radius},
+      SpenserSt:{lat: SpenserSt.lat,lng: SpenserSt.lng, radius: SpenserSt.radius},
+      VandonSt:{lat: VandonSt.lat,lng: VandonSt.lat, radius: VandonSt.radius},
+      QueenAnneGate:{lat: QueenAnneGate.lat,lng: QueenAnneGate.lng, radius: QueenAnneGate.radius},
+      PalaceSt:{lat: PalaceSt.lat,lng: PalaceSt.lng, radius: PalaceSt.radius},
+      Warwichrow:{lat: Warwichrow.lat,lng: Warwichrow.lng, radius: Warwichrow.radius},
+      StaffordPlace:{lat: StaffordPlace.lat,lng: StaffordPlace.lng, radius: StaffordPlace.radius},
+      YeomanRow:{lat: YeomanRow.lat,lng: YeomanRow.lng, radius: YeomanRow.radius},
+      EgertonTerrace:{lat: EgertonTerrace.lat,lng: EgertonTerrace.lng, radius: EgertonTerrace.radius},
+      FirstSt:{lat: FirstSt.lat,lng: FirstSt.lng, radius: FirstSt.radius},
+      CrescentPl:{lat: CrescentPl.lat,lng: CrescentPl.lng, radius: CrescentPl.radius},
+      ClabonMews:{lat: ClabonMews.lat,lng: ClabonMews.lng, radius: ClabonMews.radius},
+      PavilionRd:{lat: PavilionRd.lat,lng: PavilionRd.lng, radius: PavilionRd.radius},
+      CadoganStreet:{lat: CadoganStreet.lat,lng: CadoganStreet.lng, radius: CadoganStreet.radius},
+      DraycottTerrace:{lat: DraycottTerrace.lat,lng: DraycottTerrace.lng, radius: DraycottTerrace.radius},
+      culfordgardens:{lat: culfordgardens.lat,lng: culfordgardens.lng, radius: culfordgardens.radius},
+      SymonsSt:{lat: SymonsSt.lat,lng: SymonsSt.lng, radius: SymonsSt.radius},
+      A3216:{lat: A3216.lat,lng: A3216.lng, radius: A3216.radius},
+      SaatchiGallery:{lat: SaatchiGallery.lat,lng: SaatchiGallery.lng, radius: SaatchiGallery.radius},
+      parkingarea:{lat: parkingarea.lat,lng: parkingarea.lng, radius: parkingarea.radius},
+      MarkhamSquare:{lat: MarkhamSquare.lat,lng: MarkhamSquare.lng, radius: MarkhamSquare.radius},
+      CaleStreet:{lat: CaleStreet.lat,lng: CaleStreet.lng, radius: CaleStreet.radius},
+      wellingtonsquare:{lat: wellingtonsquare.lat,lng: wellingtonsquare.lng, radius: wellingtonsquare.radius},
+      ManresaRd:{lat: ManresaRd.lat,lng: ManresaRd.lng, radius: ManresaRd.radius},
+      KingsRd:{lat: KingsRd.lat,lng: KingsRd.lng, radius: KingsRd.radius},
+      OakleyGardens:{lat: OakleyGardens.lat,lng: OakleyGardens.lng, radius: OakleyGardens.radius},
+      StLooAve:{lat: StLooAve.lat,lng: StLooAve.lng, radius: StLooAve.radius},
+      eastroad:{lat: eastroad.lat,lng: eastroad.lng, radius: eastroad.radius},
+      ElmParkRd:{lat: ElmParkRd.lat,lng: ElmParkRd.lng, radius: ElmParkRd.radius},
+      MulberryWalk:{lat: MulberryWalk.lat,lng: MulberryWalk.lng, radius: MulberryWalk.radius},
+      ParkWalk:{lat: ParkWalk.lat,lng: ParkWalk.lng, radius: ParkWalk.radius},
+      beaufortst:{lat: beaufortst.lat,lng: beaufortst.lng, radius: beaufortst.radius},
+      MoravianPl:{lat: MoravianPl.lat,lng: MoravianPl.lng, radius: MoravianPl.radius},
+      annlane:{lat: annlane.lat,lng: annlane.lng, radius: annlane.radius},
+      EdithYard:{lat: EdithYard.lat,lng: EdithYard.lng, radius: EdithYard.radius},
+      AshburnhamRoad:{lat: AshburnhamRoad.lat,lng: AshburnhamRoad.lng, radius: AshburnhamRoad.radius},
+      thorndickcl:{lat: thorndickcl.lat,lng: thorndickcl.lng, radius: thorndickcl.radius},
+      FullhamRoad:{lat: FullhamRoad.lat,lng: FullhamRoad.lng, radius: FullhamRoad.radius},
+      TheTrafalgar: {lat:TheTrafalgar.lat,lng: TheTrafalgar.lng,radius:25}
 
+    }
+
+    // Robbery / Bulgary / Shoplifting
+    // const RBSLocations = {HorseGuardsAve: {lat:HorseGuardsAve.lat, lng: HorseGuardsAve.lng, radius: HorseGuardsAve.radius},
+  //   MatthewParkerSt: {lat: MatthewParkerSt.lat,lng: MatthewParkerSt.lng,radius: MatthewParkerSt.radius},
+  //   CaxtonSt: {lat: CaxtonSt.lat,lng: CaxtonSt.lng,radius: CaxtonSt.radius},
+  //   B323: {lat: B323.lat,lng: B323.lng,radius: B323.radius},
+  //   SaintMatthewSt: {lat: SaintMatthewSt.lat,lng: SaintMatthewSt.lng,radius: SaintMatthewSt.radius},
+  //   MonckStreet: {lat: MonckStreet.lat,lng: MonckStreet.lng,radius: MonckStreet.radius},
+  //   HidePlace: {lat: HidePlace.lat,lng: HidePlace.lng,radius: HidePlace.radius},
+  //   WillowPlace: {lat: WillowPlace.lat,lng: WillowPlace.lng,radius: WillowPlace.radius},
+  //   DouglasSt: {lat: DouglasSt.lat,lng: DouglasSt.lng,radius: DouglasSt.radius},
+  //   BeestonPlace: {lat: BeestonPlace.lat,lng: BeestonPlace.lng,radius: BeestonPlace.radius},
+  //   VictoriaSqr: {lat: VictoriaSqr.lat,lng: VictoriaSqr.lng,radius: VictoriaSqr.radius},
+  //   AllingtonSt: {lat: AllingtonSt.lat,lng: AllingtonSt.lng,radius: AllingtonSt.radius},
+  //   VauxhallBridgeRd: {lat: VauxhallBridgeRd.lat,lng: VauxhallBridgeRd.lng,radius: VauxhallBridgeRd.radius},
+  //   AmbrosdenAve: {lat: AmbrosdenAve.lat,lng: AmbrosdenAve.lng,radius: AmbrosdenAve.radius},
+  //   HowichPlace: {lat: HowichPlace.lat,lng: HowichPlace.lng,radius: HowichPlace.radius},
+  //   StillingtonSt: {lat: StillingtonSt.lat,lng: StillingtonSt.lng,radius: StillingtonSt.radius},
+  //   CardinalWalk: {lat: CardinalWalk.lat,lng: CardinalWalk.lng,radius: CardinalWalk.radius},
+  //   WarwichRow: {lat: WarwichRow.lat,lng: WarwichRow.lng,radius: WarwichRow.radius},
+  //   KingsRd:{lat: KingsRd.lat, lng: KingsRd.lng,radius:10},
+    
+  // }
+
+  //   // Vehicles
+  //   const VehicleLocations = {DacreSreet: {lat: DacreSreet.lat, lng: DacreSreet.lng, radius:DacreSreet.radius},
+  //     MonckSt: {lat: MonckSt.lat, lng: MonckSt.lng, radius:MonckSt.radius},
+  //     RutherfordSt: {lat: RutherfordSt.lat, lng: RutherfordSt.lng, radius:RutherfordSt.radius},
+  //     EsterbrookeSt: {lat: EsterbrookeSt.lat, lng: EsterbrookeSt.lng, radius:EsterbrookeSt.radius},
+  //     PonsonbyPlace: {lat: PonsonbyPlace.lat, lng: PonsonbyPlace.lng, radius:PonsonbyPlace.radius},
+  //     ThirlebyRd: {lat: ThirlebyRd.lat, lng: ThirlebyRd.lng, radius:ThirlebyRd.radius},
+  //     HowichPl: {lat: HowichPl.lat, lng: HowichPl.lng, radius:HowichPl.radius},
+  //     BeauchampPl: {lat: BeauchampPl.lat, lng: BeauchampPl.lng, radius:BeauchampPl.radius},
+  //     EgertonGardens: {lat: EgertonGardens.lat, lng: EgertonGardens.lng, radius:EgertonGardens.radius},
+  //     EgertonGardens_two: {lat: EgertonGardens_two.lat, lng: EgertonGardens_two.lng, radius:EgertonGardens_two.radius},
+  //     OvingstonStreet: {lat: OvingstonStreet.lat, lng: OvingstonStreet.lng, radius:OvingstonStreet.radius},
+  //     CrescentPlace: {lat: CrescentPlace.lat, lng: CrescentPlace.lng, radius:CrescentPlace.radius},
+  //     HalseySt: {lat: HalseySt.lat, lng: HalseySt.lng, radius:HalseySt.radius},
+  //     MilnerStreet: {lat: MilnerStreet.lat, lng: MilnerStreet.lng, radius:MilnerStreet.radius},
+  //     ShafloMews: {lat: ShafloMews.lat, lng: ShafloMews.lng, radius:ShafloMews.radius},
+  //     CadoganGardens: {lat: CadoganGardens.lat, lng: CadoganGardens.lng, radius:CadoganGardens.radius},
+  //     DraycottAvenue: {lat: DraycottAvenue.lat, lng: DraycottAvenue.lng, radius:DraycottAvenue.radius},
+  //     SloaneAve: {lat: SloaneAve.lat, lng: SloaneAve.lng, radius:SloaneAve.radius},
+  //     SprimontPl: {lat: SprimontPl.lat, lng: SprimontPl.lng, radius:SprimontPl.radius},
+  //     JubileePl: {lat: JubileePl.lat, lng: JubileePl.lng, radius:JubileePl.radius},
+  //     WellingtonSquare: {lat: WellingtonSquare.lat, lng: WellingtonSquare.lng, radius:WellingtonSquare.radius},
+  //     DovehouseStreet: {lat: DovehouseStreet.lat, lng: DovehouseStreet.lng, radius:DovehouseStreet.radius},
+  //     stleonardsterrace: {lat: stleonardsterrace.lat, lng: stleonardsterrace.lng, radius:stleonardsterrace.radius},
+  //     ManresaRoad: {lat: ManresaRoad.lat, lng: ManresaRoad.lng, radius:ManresaRoad.radius},
+  //     CheyneGardens: {lat: CheyneGardens.lat, lng: CheyneGardens.lng, radius:CheyneGardens.radius},
+  //     RoyalHospitalRoad: {lat: RoyalHospitalRoad.lat, lng: RoyalHospitalRoad.lng, radius:RoyalHospitalRoad.radius},
+  //     ParadiseWalk: {lat: ParadiseWalk.lat, lng: ParadiseWalk.lng, radius:ParadiseWalk.radius},
+  //     FranklinsRow: {lat: FranklinsRow.lat, lng: FranklinsRow.lng, radius:FranklinsRow.radius},
+  //     SloaneCourtWest: {lat: SloaneCourtWest.lat, lng: SloaneCourtWest.lng, radius:SloaneCourtWest.radius},
+  //     LordshipPl: {lat: LordshipPl.lat, lng: LordshipPl.lng, radius:LordshipPl.radius},
+  //     OldChurchStreet: {lat: OldChurchStreet.lat, lng: OldChurchStreet.lng, radius:OldChurchStreet.radius},
+  //     elmparkgarndens: {lat: elmparkgarndens.lat, lng: elmparkgarndens.lng, radius:elmparkgarndens.radius},
+  //     kingsroad: {lat: kingsroad.lat, lng: kingsroad.lng, radius:kingsroad.radius},
+  //     parkwalk: {lat: parkwalk.lat, lng: parkwalk.lng, radius:parkwalk.radius},
+  //     BeaufortSt: {lat: BeaufortSt.lat, lng: BeaufortSt.lng, radius:BeaufortSt.radius},
+  //     LamontRoadPassage: {lat: LamontRoadPassage.lat, lng: LamontRoadPassage.lng, radius:LamontRoadPassage.radius},
+  //     limerstonstreet: {lat: limerstonstreet.lat, lng: limerstonstreet.lng, radius:limerstonstreet.radius},
+  //     GertrudeStreet: {lat: GertrudeStreet.lat, lng: GertrudeStreet.lng, radius:GertrudeStreet.radius},
+  //     LamontRoad: {lat: LamontRoad.lat, lng: LamontRoad.lng, radius:LamontRoad.radius},
+  //     LangtonStreet: {lat: LangtonStreet.lat, lng: LangtonStreet.lng, radius:LangtonStreet.radius},
+  //     TademaRoad: {lat: TademaRoad.lat, lng: TademaRoad.lng, radius:TademaRoad.radius},
+  //     UpcerneRd: {lat: UpcerneRd.lat, lng: UpcerneRd.lng, radius:UpcerneRd.radius},
+  //     LotsRd: {lat: LotsRd.lat, lng: LotsRd.lng, radius:LotsRd.radius},
+  //     HortensiaRd: {lat: HortensiaRd.lat, lng: HortensiaRd.lng, radius:HortensiaRd.radius}
+  //   }
+
+    // Scams
+    // const ScamsLocations = {WestminsterBridge: {lat: WestminsterBridge.lat, lng: WestminsterBridge.lng, radius: WestminsterBridge.radius},
+    //   DaycottsApartments: {lat: DaycottsApartments.lat, lng: DaycottsApartments.lng, radius: DaycottsApartments.radius},
+    //   IvyChelseaGarden: {lat: IvyChelseaGarden.lat, lng: IvyChelseaGarden.lng, radius: IvyChelseaGarden.radius},
+    //   sloaneave: {lat: sloaneave.lat, lng: sloaneave.lng, radius: sloaneave.radius},
+    //   RoyalHospitalRd: {lat: RoyalHospitalRd.lat, lng: RoyalHospitalRd.lng, radius: RoyalHospitalRd.radius}
+    // }
+
+    // Check and Display the number of dangerous locations through a selected travel
+  // for(const violentlocation in ViolenceLocations) {
+  //   for(const coordinate of routeCoordinates) {
+  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,violentlocation);
+  //     if (distanceToCenter <= violentlocation.radius) {
+  //       Violence += 1;
+  //       // alert('Route entered HorseGuardsAve circle radius!');
+  //       // break;
+  //     }
+  //   }
+  // }
+
+  let theftCount = 0
+  for(const theftlocation in TheftLocations) {
+    const circle = TheftLocations[theftlocation]
     for(const coordinate of routeCoordinates) {
-      const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,circleCenter);
-      if (distanceToCenter <= circleRadius) {
-        alert('Route entered HorseGuardsAve circle radius!');
+      const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(
+        new google.maps.LatLng(coordinate.lat(),coordinate.lng()),
+        new google.maps.LatLng(circle.lat, circle.lng)
+      );
+      if (distanceToCenter <= circle.radius) {
+        theftCount++;
+        console.log(`Route entered ${theftlocation} circle radius!`);
         break;
       }
     }
+  }
+  alert(`Route entered theft areas ${theftCount} time(s)!`)
+  // for(const RBSlocation in RBSLocations) {
+  //   for(const coordinate of routeCoordinates) {
+  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,RBSlocation);
+  //     if (distanceToCenter <= RBSlocation.radius) {
+  //       RBS += 1;
+  //       // alert('Route entered HorseGuardsAve circle radius!');
+  //       // break;
+  //     }
+  //   }
+  // }
+
+  // for(const Vehiclelocation in VehicleLocations) {
+  //   for(const coordinate of routeCoordinates) {
+  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,Vehiclelocation);
+  //     if (distanceToCenter <= Vehiclelocation.radius) {
+  //       VehicleCrimes += 1;
+  //       // alert('Route entered HorseGuardsAve circle radius!');
+  //       // break;
+  //     }
+  //   }
+  // }
+
+  // for(const Scamlocation in ScamsLocations) {
+  //   for(const coordinate of routeCoordinates) {
+  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,Scamlocation);
+  //     if (distanceToCenter <= Scamlocation.radius) {
+  //       Scams += 1;
+  //       // alert('Route entered HorseGuardsAve circle radius!');
+  //       // break;
+  //     }
+  //   }
+  // }
 
     setDirectionResponse(results)
     setDistance(results.routes[0].legs[0].distance.text)
     setDuration(results.routes[0].legs[0].duration.text)
+    // console.log('Before alert')
+    // // alert('Throughout your travel you will go through Violence areas: ' + Violence +' Theft areas: ' + Theft + ' Robbery/Burglary/Shoplifting areas: ' + RBS + ' Vehicle crime areas: ' + VehicleCrimes + ' Scam areas: ' + Scams)
+    // alert('All theft: ' + Theft)
+    // console.log('After alert')
+
     }
   // Select travel mode
    function getGoogleMapsTravelMode(selectTravelMode) {
@@ -1227,11 +1543,60 @@ const {isLoaded} = useJsApiLoader({
             strokeOpacity: 1,
             fillColor: '#FF0000',
             fillOpacity: .4,
-            center: EdithGroveCarPark,
+            center: ChelseaTheatre,
             radius: 20,
             map: map
           });
           setMap(V68)
+
+          const V69 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: edithgrove,
+            radius: 10,
+            map: map
+          });
+          setMap(V69)
+
+          const V70 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: lotsrd,
+            radius: 10,
+            map: map
+          });
+          setMap(V70)
+
+          const V71 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: ThorndickCl,
+            radius: 15,
+            map: map
+          });
+          setMap(V71)
+
+          const V72 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: fullhamroad,
+            radius: 15,
+            map: map
+          });
+          setMap(V72)
+
 
         //Theft
           const T1 = new google.maps.Circle({
@@ -2148,6 +2513,42 @@ const T76 = new google.maps.Circle({
 });
 setMap(T76)
 
+const T77 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: AshburnhamRoad,
+  radius: 10,
+  map: map
+});
+setMap(T77)
+
+const T78 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: thorndickcl,
+  radius: 10,
+  map: map
+});
+setMap(T78)
+
+const T79 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: FullhamRoad,
+  radius: 30,
+  map: map
+});
+setMap(T79)
+
         //Robbery/Burglary/Shoplifting (Orange/Amber)
           const RBS1 = new google.maps.Circle({
             strokeColor: '#FFA500',
@@ -2751,6 +3152,42 @@ const RBS50 = new google.maps.Circle({
 });
 setMap(RBS50)
 
+const RBS51 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: EdithGrove,
+  radius: 10,
+  map: map
+});
+setMap(RBS51)
+
+const RBS52 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: upcernerd,
+  radius: 10,
+  map: map
+});
+setMap(RBS52)
+
+const RBS53 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: hortensiaroad,
+  radius: 20,
+  map: map
+});
+setMap(RBS53)
+
         //Vehicle Crimes
         const VehC1 = new google.maps.Circle({
           strokeColor: '#800080',
@@ -3220,6 +3657,54 @@ const VehC39 = new google.maps.Circle({
 });
 setMap(VehC39)
 
+const VehC40 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: TademaRoad,
+  radius: 10,
+  map: map
+});
+setMap(VehC40)
+
+const VehC41 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: UpcerneRd,
+  radius: 10,
+  map: map
+});
+setMap(VehC41)
+
+const VehC42 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: LotsRd,
+  radius: 10,
+  map: map
+});
+setMap(VehC42)
+
+const VehC43 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: HortensiaRd,
+  radius: 10,
+  map: map
+});
+setMap(VehC43)
+
 // Scams (Yellow)
 const S1 = new google.maps.Circle({
   strokeColor: '#FFFF00',
@@ -3233,7 +3718,53 @@ const S1 = new google.maps.Circle({
 });
 setMap(S1)
 
+const S2 = new google.maps.Circle({
+  strokeColor: '#FFFF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFFF00',
+  fillOpacity: .4,
+  center: DaycottsApartments,
+  radius: 10,
+  map: map
+});
+setMap(S2)
 
+const S3 = new google.maps.Circle({
+  strokeColor: '#FFFF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFFF00',
+  fillOpacity: .4,
+  center: IvyChelseaGarden,
+  radius: 10,
+  map: map
+});
+setMap(S3)
+
+const S4 = new google.maps.Circle({
+  strokeColor: '#FFFF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFFF00',
+  fillOpacity: .4,
+  center: sloaneave,
+  radius: 20,
+  map: map
+});
+setMap(S4)
+
+const S5 = new google.maps.Circle({
+  strokeColor: '#FFFF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFFF00',
+  fillOpacity: .4,
+  center: RoyalHospitalRd,
+  radius: 15,
+  map: map
+});
+setMap(S5)
 
 
 
