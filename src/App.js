@@ -339,88 +339,82 @@ const {isLoaded} = useJsApiLoader({
   
     //check if route enters any circles
     const routeCoordinates = results.routes[0].overview_path;
-    // const circleCenter = new google.maps.LatLng(HorseGuardsAve.lat,HorseGuardsAve.lng);
-    // const circleRadius = 50;
-    // const Violence = 0;
-    // const Theft = 0;
-    // const RBS = 0;
-    // const VehicleCrimes = 0;
-    // const Scams = 0;
+  
     //Locations
     //Violence 
-    // const ViolenceLocations = {WhitehallCt: {lat: WhitehallCt.lat,lng: WhitehallCt.lng, radius: WhitehallCt.radius},
-    // WestminsterPier: {lat: WestminsterPier.lat, lng: WestminsterPier.lng, radius: WestminsterPier.radius},
-    // WestminsterArms: {lat: WestminsterArms.lat, lng: WestminsterArms.lng, radius: WestminsterArms.radius},
-    // CarteretSt: {lat: CarteretSt.lat, lng: CarteretSt.lng, radius: CarteretSt.radius},
-    // DacreSt: {lat: DacreSt.lat,lng: DacreSt.lng, radius: DacreSt.radius},
-    // StarbucksCoffee: {lat: StarbucksCoffee.lat, lng: StarbucksCoffee.lng,radius:StarbucksCoffee.radius},
-    // VictoriaSt: {lat: VictoriaSt.lat, lng: VictoriaSt.lng,radius:VictoriaSt.radius},
-    // OldPyeSt: {lat: OldPyeSt.lat, lng: OldPyeSt.lng,radius:OldPyeSt.radius},
-    // StMatthewStreet: {lat: StMatthewStreet.lat, lng: StMatthewStreet.lng,radius:StMatthewStreet.radius},
-    // GreycoatPlace: {lat: GreycoatPlace.lat, lng: GreycoatPlace.lng,radius:GreycoatPlace.radius},
-    // GreatPeterStreet: {lat: GreatPeterStreet.lat, lng: GreatPeterStreet.lng,radius:GreatPeterStreet.radius},
-    // DeanTrenchSt: {lat: DeanTrenchSt.lat, lng: DeanTrenchSt.lng,radius:DeanTrenchSt.radius},
-    // HorseferryRd: {lat: HorseferryRd.lat, lng: HorseferryRd.lng,radius:HorseferryRd.radius},
-    // ArnewaySt: {lat: ArnewaySt.lat, lng: ArnewaySt.lng,radius:ArnewaySt.radius},
-    // ChadwichSt: {lat: ChadwichSt.lat, lng: ChadwichSt.lng,radius:ChadwichSt.radius},
-    // ThorneySt: {lat: ThorneySt.lat, lng: ThorneySt.lng,radius:ThorneySt.radius},
-    // PageSt: {lat: PageSt.lat, lng: PageSt.lng,radius:PageSt.radius},
-    // RegencySt: {lat: RegencySt.lat, lng: RegencySt.lng,radius:RegencySt.radius},
-    // VincentStreet: {lat: VincentStreet.lat, lng: VincentStreet.lng,radius:VincentStreet.radius},
-    // RegencyStreet: {lat: RegencyStreet.lat, lng: RegencyStreet.lng,radius:RegencyStreet.radius},
-    // WalcottSt: {lat: WalcottSt.lat, lng: WalcottSt.lng,radius:WalcottSt.radius},
-    // VauxhallBridgeRoad: {lat: VauxhallBridgeRoad.lat, lng: VauxhallBridgeRoad.lng,radius:VauxhallBridgeRoad.radius},
-    // HatherleyStreet: {lat: HatherleyStreet.lat, lng: HatherleyStreet.lng,radius:HatherleyStreet.radius},
-    // HerrickSt: {lat: HerrickSt.lat, lng: HerrickSt.lng,radius:HerrickSt.radius},
-    // CuretonSt: {lat: CuretonSt.lat, lng: CuretonSt.lng,radius:CuretonSt.radius},
-    // AtterburySt: {lat: AtterburySt.lat, lng: AtterburySt.lng,radius:AtterburySt.radius},
-    // VictoriaStreet: {lat: VictoriaStreet.lat, lng: VictoriaStreet.lng,radius:VictoriaStreet.radius}, 
-    // ThirlebyRoad: {lat: ThirlebyRoad.lat, lng: ThirlebyRoad.lng,radius:ThirlebyRoad.radius},
-    // GreencoatRow: {lat: GreencoatRow.lat, lng: GreencoatRow.lng,radius:GreencoatRow.radius},
-    // FrancisSt: {lat: FrancisSt.lat, lng: FrancisSt.lng,radius:FrancisSt.radius},
-    // MorpethTerrace: {lat: MorpethTerrace.lat, lng: MorpethTerrace.lng,radius:MorpethTerrace.radius},
-    // StillingtonStreet: {lat: StillingtonStreet.lat, lng: StillingtonStreet.lng,radius:StillingtonStreet.radius},
-    // SpenserStreet: {lat: SpenserStreet.lat, lng: SpenserStreet.lng,radius:SpenserStreet.radius},
-    // VandonStreet: {lat: VandonStreet.lat, lng: VandonStreet.lng,radius:VandonStreet.radius},
-    // BuckinghamGate: {lat: BuckinghamGate.lat, lng: BuckinghamGate.lng,radius:BuckinghamGate.radius},
-    // PalaceStreet: {lat: PalaceStreet.lat, lng: PalaceStreet.lng,radius:PalaceStreet.radius},
-    // ParliamentSt: {lat: ParliamentSt.lat, lng: ParliamentSt.lng,radius:ParliamentSt.radius},
-    // OvingtonMews: {lat: OvingtonMews.lat, lng: OvingtonMews.lng,radius:OvingtonMews.radius},
-    // EgertonGardensMews: {lat: EgertonGardensMews.lat, lng: EgertonGardensMews.lng,radius:EgertonGardensMews.radius},
-    // HaskerStreet: {lat: HaskerStreet.lat, lng: HaskerStreet.lng,radius:HaskerStreet.radius},
-    // CadoganGate: {lat: CadoganGate.lat, lng: CadoganGate.lng,radius:CadoganGate.radius},
-    // RawlingsSt: {lat: RawlingsSt.lat, lng: RawlingsSt.lng,radius:RawlingsSt.radius},
-    // DraycottAve: {lat: DraycottAve.lat, lng: DraycottAve.lng,radius:DraycottAve.radius},
-    // MakinsSt: {lat: MakinsSt.lat, lng: MakinsSt.lng,radius:MakinsSt.radius},
-    // IxworthPlace: {lat: IxworthPlace.lat, lng: IxworthPlace.lng,radius:IxworthPlace.radius},
-    // BuryWalk: {lat: BuryWalk.lat, lng: BuryWalk.lng,radius:BuryWalk.radius},
-    // DanuseSt: {lat: DanuseSt.lat, lng: DanuseSt.lng,radius:DanuseSt.radius},
-    // CaleSt: {lat: CaleSt.lat, lng: CaleSt.lng,radius:CaleSt.radius},
-    // FloodWalk: {lat: FloodWalk.lat, lng: FloodWalk.lng,radius:FloodWalk.radius},
-    // roalhospitalroad: {lat: roalhospitalroad.lat, lng: roalhospitalroad.lng,radius:roalhospitalroad.radius},
-    // PetytPlace: {lat: PetytPlace.lat, lng: PetytPlace.lng,radius:PetytPlace.radius},
-    // DanversSt: {lat: DanversSt.lat, lng: DanversSt.lng,radius:DanversSt.radius},
-    // CarlyleSquare: {lat: CarlyleSquare.lat, lng: CarlyleSquare.lng,radius:CarlyleSquare.radius},
-    // ElmParkGardens: {lat: ElmParkGardens.lat, lng: ElmParkGardens.lng,radius:ElmParkGardens.radius},
-    // kingsrd: {lat: kingsrd.lat, lng: kingsrd.lng,radius:kingsrd.radius},
-    // KingsRd: {lat: KingsRd.lat, lng: KingsRd.lng,radius:15},
-    // PeonyCourt: {lat: PeonyCourt.lat, lng: PeonyCourt.lng,radius:PeonyCourt.radius},
-    // ChelseaParkGardens: {lat: ChelseaParkGardens.lat, lng: ChelseaParkGardens.lng,radius:ChelseaParkGardens.radius},
-    // BeaufordStreet: {lat: BeaufordStreet.lat, lng: BeaufordStreet.lng,radius:BeaufordStreet.radius},
-    // lamontroadpassage: {lat: lamontroadpassage.lat, lng: lamontroadpassage.lng,radius:lamontroadpassage.radius},
-    // LimerstonStreet: {lat: LimerstonStreet.lat, lng: LimerstonStreet.lng,radius:LimerstonStreet.radius},
-    // NightingalePl: {lat: NightingalePl.lat, lng: NightingalePl.lng,radius: NightingalePl.radius},
-    // LangtonSt: {lat: LangtonSt.lat, lng: LangtonSt.lng,radius:LangtonSt.radius},
-    // RileySt: {lat: RileySt.lat, lng: RileySt.lng,radius:RileySt.radius},
-    // AnnLane: {lat: AnnLane.lat, lng: AnnLane.lng,radius:AnnLane.radius},
-    // EdithGroveCarPark: {lat: EdithGroveCarPark.lat, lng: EdithGroveCarPark.lng,radius:EdithGroveCarPark.radius},
-    // ChelseaTheatre: {lat: ChelseaTheatre.lat, lng: ChelseaTheatre.lng,radius:ChelseaTheatre.radius},
-    // edithgrove: {lat: edithgrove.lat, lng: edithgrove.lng,radius:edithgrove.radius},
-    // lotsrd: {lat: lotsrd.lat, lng: lotsrd.lng,radius:lotsrd.radius},
-    // ThorndickCl: {lat: ThorndickCl.lat, lng: ThorndickCl.lng,radius:ThorndickCl.radius},
-    // fullhamroad: {lat: fullhamroad.lat, lng: fullhamroad.lng,radius:fullhamroad.radius},
-    // TheTrafalgar: {lat:TheTrafalgar.lat,lng: TheTrafalgar.lng,radius:15}
-    // }
+    const ViolenceLocations = {WhitehallCt: {lat: WhitehallCt.lat,lng: WhitehallCt.lng, radius: WhitehallCt.radius},
+    WestminsterPier: {lat: WestminsterPier.lat, lng: WestminsterPier.lng, radius: WestminsterPier.radius},
+    WestminsterArms: {lat: WestminsterArms.lat, lng: WestminsterArms.lng, radius: WestminsterArms.radius},
+    CarteretSt: {lat: CarteretSt.lat, lng: CarteretSt.lng, radius: CarteretSt.radius},
+    DacreSt: {lat: DacreSt.lat,lng: DacreSt.lng, radius: DacreSt.radius},
+    StarbucksCoffee: {lat: StarbucksCoffee.lat, lng: StarbucksCoffee.lng,radius:StarbucksCoffee.radius},
+    VictoriaSt: {lat: VictoriaSt.lat, lng: VictoriaSt.lng,radius:VictoriaSt.radius},
+    OldPyeSt: {lat: OldPyeSt.lat, lng: OldPyeSt.lng,radius:OldPyeSt.radius},
+    StMatthewStreet: {lat: StMatthewStreet.lat, lng: StMatthewStreet.lng,radius:StMatthewStreet.radius},
+    GreycoatPlace: {lat: GreycoatPlace.lat, lng: GreycoatPlace.lng,radius:GreycoatPlace.radius},
+    GreatPeterStreet: {lat: GreatPeterStreet.lat, lng: GreatPeterStreet.lng,radius:GreatPeterStreet.radius},
+    DeanTrenchSt: {lat: DeanTrenchSt.lat, lng: DeanTrenchSt.lng,radius:DeanTrenchSt.radius},
+    HorseferryRd: {lat: HorseferryRd.lat, lng: HorseferryRd.lng,radius:HorseferryRd.radius},
+    ArnewaySt: {lat: ArnewaySt.lat, lng: ArnewaySt.lng,radius:ArnewaySt.radius},
+    ChadwichSt: {lat: ChadwichSt.lat, lng: ChadwichSt.lng,radius:ChadwichSt.radius},
+    ThorneySt: {lat: ThorneySt.lat, lng: ThorneySt.lng,radius:ThorneySt.radius},
+    PageSt: {lat: PageSt.lat, lng: PageSt.lng,radius:PageSt.radius},
+    RegencySt: {lat: RegencySt.lat, lng: RegencySt.lng,radius:RegencySt.radius},
+    VincentStreet: {lat: VincentStreet.lat, lng: VincentStreet.lng,radius:VincentStreet.radius},
+    RegencyStreet: {lat: RegencyStreet.lat, lng: RegencyStreet.lng,radius:RegencyStreet.radius},
+    WalcottSt: {lat: WalcottSt.lat, lng: WalcottSt.lng,radius:WalcottSt.radius},
+    VauxhallBridgeRoad: {lat: VauxhallBridgeRoad.lat, lng: VauxhallBridgeRoad.lng,radius:VauxhallBridgeRoad.radius},
+    HatherleyStreet: {lat: HatherleyStreet.lat, lng: HatherleyStreet.lng,radius:HatherleyStreet.radius},
+    HerrickSt: {lat: HerrickSt.lat, lng: HerrickSt.lng,radius:HerrickSt.radius},
+    CuretonSt: {lat: CuretonSt.lat, lng: CuretonSt.lng,radius:CuretonSt.radius},
+    AtterburySt: {lat: AtterburySt.lat, lng: AtterburySt.lng,radius:AtterburySt.radius},
+    VictoriaStreet: {lat: VictoriaStreet.lat, lng: VictoriaStreet.lng,radius:VictoriaStreet.radius}, 
+    ThirlebyRoad: {lat: ThirlebyRoad.lat, lng: ThirlebyRoad.lng,radius:ThirlebyRoad.radius},
+    GreencoatRow: {lat: GreencoatRow.lat, lng: GreencoatRow.lng,radius:GreencoatRow.radius},
+    FrancisSt: {lat: FrancisSt.lat, lng: FrancisSt.lng,radius:FrancisSt.radius},
+    MorpethTerrace: {lat: MorpethTerrace.lat, lng: MorpethTerrace.lng,radius:MorpethTerrace.radius},
+    StillingtonStreet: {lat: StillingtonStreet.lat, lng: StillingtonStreet.lng,radius:StillingtonStreet.radius},
+    SpenserStreet: {lat: SpenserStreet.lat, lng: SpenserStreet.lng,radius:SpenserStreet.radius},
+    VandonStreet: {lat: VandonStreet.lat, lng: VandonStreet.lng,radius:VandonStreet.radius},
+    BuckinghamGate: {lat: BuckinghamGate.lat, lng: BuckinghamGate.lng,radius:BuckinghamGate.radius},
+    PalaceStreet: {lat: PalaceStreet.lat, lng: PalaceStreet.lng,radius:PalaceStreet.radius},
+    ParliamentSt: {lat: ParliamentSt.lat, lng: ParliamentSt.lng,radius:ParliamentSt.radius},
+    OvingtonMews: {lat: OvingtonMews.lat, lng: OvingtonMews.lng,radius:OvingtonMews.radius},
+    EgertonGardensMews: {lat: EgertonGardensMews.lat, lng: EgertonGardensMews.lng,radius:EgertonGardensMews.radius},
+    HaskerStreet: {lat: HaskerStreet.lat, lng: HaskerStreet.lng,radius:HaskerStreet.radius},
+    CadoganGate: {lat: CadoganGate.lat, lng: CadoganGate.lng,radius:CadoganGate.radius},
+    RawlingsSt: {lat: RawlingsSt.lat, lng: RawlingsSt.lng,radius:RawlingsSt.radius},
+    DraycottAve: {lat: DraycottAve.lat, lng: DraycottAve.lng,radius:DraycottAve.radius},
+    MakinsSt: {lat: MakinsSt.lat, lng: MakinsSt.lng,radius:MakinsSt.radius},
+    IxworthPlace: {lat: IxworthPlace.lat, lng: IxworthPlace.lng,radius:IxworthPlace.radius},
+    BuryWalk: {lat: BuryWalk.lat, lng: BuryWalk.lng,radius:BuryWalk.radius},
+    DanuseSt: {lat: DanuseSt.lat, lng: DanuseSt.lng,radius:DanuseSt.radius},
+    CaleSt: {lat: CaleSt.lat, lng: CaleSt.lng,radius:CaleSt.radius},
+    FloodWalk: {lat: FloodWalk.lat, lng: FloodWalk.lng,radius:FloodWalk.radius},
+    roalhospitalroad: {lat: roalhospitalroad.lat, lng: roalhospitalroad.lng,radius:roalhospitalroad.radius},
+    PetytPlace: {lat: PetytPlace.lat, lng: PetytPlace.lng,radius:PetytPlace.radius},
+    DanversSt: {lat: DanversSt.lat, lng: DanversSt.lng,radius:DanversSt.radius},
+    CarlyleSquare: {lat: CarlyleSquare.lat, lng: CarlyleSquare.lng,radius:CarlyleSquare.radius},
+    ElmParkGardens: {lat: ElmParkGardens.lat, lng: ElmParkGardens.lng,radius:ElmParkGardens.radius},
+    kingsrd: {lat: kingsrd.lat, lng: kingsrd.lng,radius:kingsrd.radius},
+    KingsRd: {lat: KingsRd.lat, lng: KingsRd.lng,radius:15},
+    PeonyCourt: {lat: PeonyCourt.lat, lng: PeonyCourt.lng,radius:PeonyCourt.radius},
+    ChelseaParkGardens: {lat: ChelseaParkGardens.lat, lng: ChelseaParkGardens.lng,radius:ChelseaParkGardens.radius},
+    BeaufordStreet: {lat: BeaufordStreet.lat, lng: BeaufordStreet.lng,radius:BeaufordStreet.radius},
+    lamontroadpassage: {lat: lamontroadpassage.lat, lng: lamontroadpassage.lng,radius:lamontroadpassage.radius},
+    LimerstonStreet: {lat: LimerstonStreet.lat, lng: LimerstonStreet.lng,radius:LimerstonStreet.radius},
+    NightingalePl: {lat: NightingalePl.lat, lng: NightingalePl.lng,radius: NightingalePl.radius},
+    LangtonSt: {lat: LangtonSt.lat, lng: LangtonSt.lng,radius:LangtonSt.radius},
+    RileySt: {lat: RileySt.lat, lng: RileySt.lng,radius:RileySt.radius},
+    AnnLane: {lat: AnnLane.lat, lng: AnnLane.lng,radius:AnnLane.radius},
+    EdithGroveCarPark: {lat: EdithGroveCarPark.lat, lng: EdithGroveCarPark.lng,radius:EdithGroveCarPark.radius},
+    ChelseaTheatre: {lat: ChelseaTheatre.lat, lng: ChelseaTheatre.lng,radius:ChelseaTheatre.radius},
+    edithgrove: {lat: edithgrove.lat, lng: edithgrove.lng,radius:edithgrove.radius},
+    lotsrd: {lat: lotsrd.lat, lng: lotsrd.lng,radius:lotsrd.radius},
+    ThorndickCl: {lat: ThorndickCl.lat, lng: ThorndickCl.lng,radius:ThorndickCl.radius},
+    fullhamroad: {lat: fullhamroad.lat, lng: fullhamroad.lng,radius:fullhamroad.radius},
+    TheTrafalgar: {lat:TheTrafalgar.lat,lng: TheTrafalgar.lng,radius:15}
+    }
     // Theft
     const TheftLocations = {ScotlandYard:{lat: ScotlandYard.lat,lng: ScotlandYard.lng, radius: ScotlandYard.radius},
       KoreanCC:{lat: KoreanCC.lat,lng: KoreanCC.lng, radius: KoreanCC.radius},
@@ -504,96 +498,102 @@ const {isLoaded} = useJsApiLoader({
     }
 
     // Robbery / Bulgary / Shoplifting
-    // const RBSLocations = {HorseGuardsAve: {lat:HorseGuardsAve.lat, lng: HorseGuardsAve.lng, radius: HorseGuardsAve.radius},
-  //   MatthewParkerSt: {lat: MatthewParkerSt.lat,lng: MatthewParkerSt.lng,radius: MatthewParkerSt.radius},
-  //   CaxtonSt: {lat: CaxtonSt.lat,lng: CaxtonSt.lng,radius: CaxtonSt.radius},
-  //   B323: {lat: B323.lat,lng: B323.lng,radius: B323.radius},
-  //   SaintMatthewSt: {lat: SaintMatthewSt.lat,lng: SaintMatthewSt.lng,radius: SaintMatthewSt.radius},
-  //   MonckStreet: {lat: MonckStreet.lat,lng: MonckStreet.lng,radius: MonckStreet.radius},
-  //   HidePlace: {lat: HidePlace.lat,lng: HidePlace.lng,radius: HidePlace.radius},
-  //   WillowPlace: {lat: WillowPlace.lat,lng: WillowPlace.lng,radius: WillowPlace.radius},
-  //   DouglasSt: {lat: DouglasSt.lat,lng: DouglasSt.lng,radius: DouglasSt.radius},
-  //   BeestonPlace: {lat: BeestonPlace.lat,lng: BeestonPlace.lng,radius: BeestonPlace.radius},
-  //   VictoriaSqr: {lat: VictoriaSqr.lat,lng: VictoriaSqr.lng,radius: VictoriaSqr.radius},
-  //   AllingtonSt: {lat: AllingtonSt.lat,lng: AllingtonSt.lng,radius: AllingtonSt.radius},
-  //   VauxhallBridgeRd: {lat: VauxhallBridgeRd.lat,lng: VauxhallBridgeRd.lng,radius: VauxhallBridgeRd.radius},
-  //   AmbrosdenAve: {lat: AmbrosdenAve.lat,lng: AmbrosdenAve.lng,radius: AmbrosdenAve.radius},
-  //   HowichPlace: {lat: HowichPlace.lat,lng: HowichPlace.lng,radius: HowichPlace.radius},
-  //   StillingtonSt: {lat: StillingtonSt.lat,lng: StillingtonSt.lng,radius: StillingtonSt.radius},
-  //   CardinalWalk: {lat: CardinalWalk.lat,lng: CardinalWalk.lng,radius: CardinalWalk.radius},
-  //   WarwichRow: {lat: WarwichRow.lat,lng: WarwichRow.lng,radius: WarwichRow.radius},
-  //   KingsRd:{lat: KingsRd.lat, lng: KingsRd.lng,radius:10},
+    const RBSLocations = {HorseGuardsAve: {lat:HorseGuardsAve.lat, lng: HorseGuardsAve.lng, radius: HorseGuardsAve.radius},
+    MatthewParkerSt: {lat: MatthewParkerSt.lat,lng: MatthewParkerSt.lng,radius: MatthewParkerSt.radius},
+    CaxtonSt: {lat: CaxtonSt.lat,lng: CaxtonSt.lng,radius: CaxtonSt.radius},
+    B323: {lat: B323.lat,lng: B323.lng,radius: B323.radius},
+    SaintMatthewSt: {lat: SaintMatthewSt.lat,lng: SaintMatthewSt.lng,radius: SaintMatthewSt.radius},
+    MonckStreet: {lat: MonckStreet.lat,lng: MonckStreet.lng,radius: MonckStreet.radius},
+    HidePlace: {lat: HidePlace.lat,lng: HidePlace.lng,radius: HidePlace.radius},
+    WillowPlace: {lat: WillowPlace.lat,lng: WillowPlace.lng,radius: WillowPlace.radius},
+    DouglasSt: {lat: DouglasSt.lat,lng: DouglasSt.lng,radius: DouglasSt.radius},
+    BeestonPlace: {lat: BeestonPlace.lat,lng: BeestonPlace.lng,radius: BeestonPlace.radius},
+    VictoriaSqr: {lat: VictoriaSqr.lat,lng: VictoriaSqr.lng,radius: VictoriaSqr.radius},
+    AllingtonSt: {lat: AllingtonSt.lat,lng: AllingtonSt.lng,radius: AllingtonSt.radius},
+    VauxhallBridgeRd: {lat: VauxhallBridgeRd.lat,lng: VauxhallBridgeRd.lng,radius: VauxhallBridgeRd.radius},
+    AmbrosdenAve: {lat: AmbrosdenAve.lat,lng: AmbrosdenAve.lng,radius: AmbrosdenAve.radius},
+    HowichPlace: {lat: HowichPlace.lat,lng: HowichPlace.lng,radius: HowichPlace.radius},
+    StillingtonSt: {lat: StillingtonSt.lat,lng: StillingtonSt.lng,radius: StillingtonSt.radius},
+    CardinalWalk: {lat: CardinalWalk.lat,lng: CardinalWalk.lng,radius: CardinalWalk.radius},
+    WarwichRow: {lat: WarwichRow.lat,lng: WarwichRow.lng,radius: WarwichRow.radius},
+    KingsRd:{lat: KingsRd.lat, lng: KingsRd.lng,radius:10},
     
-  // }
+  }
 
   //   // Vehicles
-  //   const VehicleLocations = {DacreSreet: {lat: DacreSreet.lat, lng: DacreSreet.lng, radius:DacreSreet.radius},
-  //     MonckSt: {lat: MonckSt.lat, lng: MonckSt.lng, radius:MonckSt.radius},
-  //     RutherfordSt: {lat: RutherfordSt.lat, lng: RutherfordSt.lng, radius:RutherfordSt.radius},
-  //     EsterbrookeSt: {lat: EsterbrookeSt.lat, lng: EsterbrookeSt.lng, radius:EsterbrookeSt.radius},
-  //     PonsonbyPlace: {lat: PonsonbyPlace.lat, lng: PonsonbyPlace.lng, radius:PonsonbyPlace.radius},
-  //     ThirlebyRd: {lat: ThirlebyRd.lat, lng: ThirlebyRd.lng, radius:ThirlebyRd.radius},
-  //     HowichPl: {lat: HowichPl.lat, lng: HowichPl.lng, radius:HowichPl.radius},
-  //     BeauchampPl: {lat: BeauchampPl.lat, lng: BeauchampPl.lng, radius:BeauchampPl.radius},
-  //     EgertonGardens: {lat: EgertonGardens.lat, lng: EgertonGardens.lng, radius:EgertonGardens.radius},
-  //     EgertonGardens_two: {lat: EgertonGardens_two.lat, lng: EgertonGardens_two.lng, radius:EgertonGardens_two.radius},
-  //     OvingstonStreet: {lat: OvingstonStreet.lat, lng: OvingstonStreet.lng, radius:OvingstonStreet.radius},
-  //     CrescentPlace: {lat: CrescentPlace.lat, lng: CrescentPlace.lng, radius:CrescentPlace.radius},
-  //     HalseySt: {lat: HalseySt.lat, lng: HalseySt.lng, radius:HalseySt.radius},
-  //     MilnerStreet: {lat: MilnerStreet.lat, lng: MilnerStreet.lng, radius:MilnerStreet.radius},
-  //     ShafloMews: {lat: ShafloMews.lat, lng: ShafloMews.lng, radius:ShafloMews.radius},
-  //     CadoganGardens: {lat: CadoganGardens.lat, lng: CadoganGardens.lng, radius:CadoganGardens.radius},
-  //     DraycottAvenue: {lat: DraycottAvenue.lat, lng: DraycottAvenue.lng, radius:DraycottAvenue.radius},
-  //     SloaneAve: {lat: SloaneAve.lat, lng: SloaneAve.lng, radius:SloaneAve.radius},
-  //     SprimontPl: {lat: SprimontPl.lat, lng: SprimontPl.lng, radius:SprimontPl.radius},
-  //     JubileePl: {lat: JubileePl.lat, lng: JubileePl.lng, radius:JubileePl.radius},
-  //     WellingtonSquare: {lat: WellingtonSquare.lat, lng: WellingtonSquare.lng, radius:WellingtonSquare.radius},
-  //     DovehouseStreet: {lat: DovehouseStreet.lat, lng: DovehouseStreet.lng, radius:DovehouseStreet.radius},
-  //     stleonardsterrace: {lat: stleonardsterrace.lat, lng: stleonardsterrace.lng, radius:stleonardsterrace.radius},
-  //     ManresaRoad: {lat: ManresaRoad.lat, lng: ManresaRoad.lng, radius:ManresaRoad.radius},
-  //     CheyneGardens: {lat: CheyneGardens.lat, lng: CheyneGardens.lng, radius:CheyneGardens.radius},
-  //     RoyalHospitalRoad: {lat: RoyalHospitalRoad.lat, lng: RoyalHospitalRoad.lng, radius:RoyalHospitalRoad.radius},
-  //     ParadiseWalk: {lat: ParadiseWalk.lat, lng: ParadiseWalk.lng, radius:ParadiseWalk.radius},
-  //     FranklinsRow: {lat: FranklinsRow.lat, lng: FranklinsRow.lng, radius:FranklinsRow.radius},
-  //     SloaneCourtWest: {lat: SloaneCourtWest.lat, lng: SloaneCourtWest.lng, radius:SloaneCourtWest.radius},
-  //     LordshipPl: {lat: LordshipPl.lat, lng: LordshipPl.lng, radius:LordshipPl.radius},
-  //     OldChurchStreet: {lat: OldChurchStreet.lat, lng: OldChurchStreet.lng, radius:OldChurchStreet.radius},
-  //     elmparkgarndens: {lat: elmparkgarndens.lat, lng: elmparkgarndens.lng, radius:elmparkgarndens.radius},
-  //     kingsroad: {lat: kingsroad.lat, lng: kingsroad.lng, radius:kingsroad.radius},
-  //     parkwalk: {lat: parkwalk.lat, lng: parkwalk.lng, radius:parkwalk.radius},
-  //     BeaufortSt: {lat: BeaufortSt.lat, lng: BeaufortSt.lng, radius:BeaufortSt.radius},
-  //     LamontRoadPassage: {lat: LamontRoadPassage.lat, lng: LamontRoadPassage.lng, radius:LamontRoadPassage.radius},
-  //     limerstonstreet: {lat: limerstonstreet.lat, lng: limerstonstreet.lng, radius:limerstonstreet.radius},
-  //     GertrudeStreet: {lat: GertrudeStreet.lat, lng: GertrudeStreet.lng, radius:GertrudeStreet.radius},
-  //     LamontRoad: {lat: LamontRoad.lat, lng: LamontRoad.lng, radius:LamontRoad.radius},
-  //     LangtonStreet: {lat: LangtonStreet.lat, lng: LangtonStreet.lng, radius:LangtonStreet.radius},
-  //     TademaRoad: {lat: TademaRoad.lat, lng: TademaRoad.lng, radius:TademaRoad.radius},
-  //     UpcerneRd: {lat: UpcerneRd.lat, lng: UpcerneRd.lng, radius:UpcerneRd.radius},
-  //     LotsRd: {lat: LotsRd.lat, lng: LotsRd.lng, radius:LotsRd.radius},
-  //     HortensiaRd: {lat: HortensiaRd.lat, lng: HortensiaRd.lng, radius:HortensiaRd.radius}
-  //   }
+    const VehicleLocations = {DacreSreet: {lat: DacreSreet.lat, lng: DacreSreet.lng, radius:DacreSreet.radius},
+      MonckSt: {lat: MonckSt.lat, lng: MonckSt.lng, radius:MonckSt.radius},
+      RutherfordSt: {lat: RutherfordSt.lat, lng: RutherfordSt.lng, radius:RutherfordSt.radius},
+      EsterbrookeSt: {lat: EsterbrookeSt.lat, lng: EsterbrookeSt.lng, radius:EsterbrookeSt.radius},
+      PonsonbyPlace: {lat: PonsonbyPlace.lat, lng: PonsonbyPlace.lng, radius:PonsonbyPlace.radius},
+      ThirlebyRd: {lat: ThirlebyRd.lat, lng: ThirlebyRd.lng, radius:ThirlebyRd.radius},
+      HowichPl: {lat: HowichPl.lat, lng: HowichPl.lng, radius:HowichPl.radius},
+      BeauchampPl: {lat: BeauchampPl.lat, lng: BeauchampPl.lng, radius:BeauchampPl.radius},
+      EgertonGardens: {lat: EgertonGardens.lat, lng: EgertonGardens.lng, radius:EgertonGardens.radius},
+      EgertonGardens_two: {lat: EgertonGardens_two.lat, lng: EgertonGardens_two.lng, radius:EgertonGardens_two.radius},
+      OvingstonStreet: {lat: OvingstonStreet.lat, lng: OvingstonStreet.lng, radius:OvingstonStreet.radius},
+      CrescentPlace: {lat: CrescentPlace.lat, lng: CrescentPlace.lng, radius:CrescentPlace.radius},
+      HalseySt: {lat: HalseySt.lat, lng: HalseySt.lng, radius:HalseySt.radius},
+      MilnerStreet: {lat: MilnerStreet.lat, lng: MilnerStreet.lng, radius:MilnerStreet.radius},
+      ShafloMews: {lat: ShafloMews.lat, lng: ShafloMews.lng, radius:ShafloMews.radius},
+      CadoganGardens: {lat: CadoganGardens.lat, lng: CadoganGardens.lng, radius:CadoganGardens.radius},
+      DraycottAvenue: {lat: DraycottAvenue.lat, lng: DraycottAvenue.lng, radius:DraycottAvenue.radius},
+      SloaneAve: {lat: SloaneAve.lat, lng: SloaneAve.lng, radius:SloaneAve.radius},
+      SprimontPl: {lat: SprimontPl.lat, lng: SprimontPl.lng, radius:SprimontPl.radius},
+      JubileePl: {lat: JubileePl.lat, lng: JubileePl.lng, radius:JubileePl.radius},
+      WellingtonSquare: {lat: WellingtonSquare.lat, lng: WellingtonSquare.lng, radius:WellingtonSquare.radius},
+      DovehouseStreet: {lat: DovehouseStreet.lat, lng: DovehouseStreet.lng, radius:DovehouseStreet.radius},
+      stleonardsterrace: {lat: stleonardsterrace.lat, lng: stleonardsterrace.lng, radius:stleonardsterrace.radius},
+      ManresaRoad: {lat: ManresaRoad.lat, lng: ManresaRoad.lng, radius:ManresaRoad.radius},
+      CheyneGardens: {lat: CheyneGardens.lat, lng: CheyneGardens.lng, radius:CheyneGardens.radius},
+      RoyalHospitalRoad: {lat: RoyalHospitalRoad.lat, lng: RoyalHospitalRoad.lng, radius:RoyalHospitalRoad.radius},
+      ParadiseWalk: {lat: ParadiseWalk.lat, lng: ParadiseWalk.lng, radius:ParadiseWalk.radius},
+      FranklinsRow: {lat: FranklinsRow.lat, lng: FranklinsRow.lng, radius:FranklinsRow.radius},
+      SloaneCourtWest: {lat: SloaneCourtWest.lat, lng: SloaneCourtWest.lng, radius:SloaneCourtWest.radius},
+      LordshipPl: {lat: LordshipPl.lat, lng: LordshipPl.lng, radius:LordshipPl.radius},
+      OldChurchStreet: {lat: OldChurchStreet.lat, lng: OldChurchStreet.lng, radius:OldChurchStreet.radius},
+      elmparkgarndens: {lat: elmparkgarndens.lat, lng: elmparkgarndens.lng, radius:elmparkgarndens.radius},
+      kingsroad: {lat: kingsroad.lat, lng: kingsroad.lng, radius:kingsroad.radius},
+      parkwalk: {lat: parkwalk.lat, lng: parkwalk.lng, radius:parkwalk.radius},
+      BeaufortSt: {lat: BeaufortSt.lat, lng: BeaufortSt.lng, radius:BeaufortSt.radius},
+      LamontRoadPassage: {lat: LamontRoadPassage.lat, lng: LamontRoadPassage.lng, radius:LamontRoadPassage.radius},
+      limerstonstreet: {lat: limerstonstreet.lat, lng: limerstonstreet.lng, radius:limerstonstreet.radius},
+      GertrudeStreet: {lat: GertrudeStreet.lat, lng: GertrudeStreet.lng, radius:GertrudeStreet.radius},
+      LamontRoad: {lat: LamontRoad.lat, lng: LamontRoad.lng, radius:LamontRoad.radius},
+      LangtonStreet: {lat: LangtonStreet.lat, lng: LangtonStreet.lng, radius:LangtonStreet.radius},
+      TademaRoad: {lat: TademaRoad.lat, lng: TademaRoad.lng, radius:TademaRoad.radius},
+      UpcerneRd: {lat: UpcerneRd.lat, lng: UpcerneRd.lng, radius:UpcerneRd.radius},
+      LotsRd: {lat: LotsRd.lat, lng: LotsRd.lng, radius:LotsRd.radius},
+      HortensiaRd: {lat: HortensiaRd.lat, lng: HortensiaRd.lng, radius:HortensiaRd.radius}
+    }
 
     // Scams
-    // const ScamsLocations = {WestminsterBridge: {lat: WestminsterBridge.lat, lng: WestminsterBridge.lng, radius: WestminsterBridge.radius},
-    //   DaycottsApartments: {lat: DaycottsApartments.lat, lng: DaycottsApartments.lng, radius: DaycottsApartments.radius},
-    //   IvyChelseaGarden: {lat: IvyChelseaGarden.lat, lng: IvyChelseaGarden.lng, radius: IvyChelseaGarden.radius},
-    //   sloaneave: {lat: sloaneave.lat, lng: sloaneave.lng, radius: sloaneave.radius},
-    //   RoyalHospitalRd: {lat: RoyalHospitalRd.lat, lng: RoyalHospitalRd.lng, radius: RoyalHospitalRd.radius}
-    // }
+    const ScamsLocations = {WestminsterBridge: {lat: WestminsterBridge.lat, lng: WestminsterBridge.lng, radius: WestminsterBridge.radius},
+      DaycottsApartments: {lat: DaycottsApartments.lat, lng: DaycottsApartments.lng, radius: DaycottsApartments.radius},
+      IvyChelseaGarden: {lat: IvyChelseaGarden.lat, lng: IvyChelseaGarden.lng, radius: IvyChelseaGarden.radius},
+      sloaneave: {lat: sloaneave.lat, lng: sloaneave.lng, radius: sloaneave.radius},
+      RoyalHospitalRd: {lat: RoyalHospitalRd.lat, lng: RoyalHospitalRd.lng, radius: RoyalHospitalRd.radius}
+    }
 
     // Check and Display the number of dangerous locations through a selected travel
-  // for(const violentlocation in ViolenceLocations) {
-  //   for(const coordinate of routeCoordinates) {
-  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,violentlocation);
-  //     if (distanceToCenter <= violentlocation.radius) {
-  //       Violence += 1;
-  //       // alert('Route entered HorseGuardsAve circle radius!');
-  //       // break;
-  //     }
-  //   }
-  // }
-
-  let theftCount = 0
+  // Violence Circles
+  let Violence = 0;
+  for(const violentlocation in ViolenceLocations) {
+    const circle = ViolenceLocations[violentlocation]
+    for(const coordinate of routeCoordinates) {
+      const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(
+        new google.maps.LatLng(coordinate.lat(),coordinate.lng()),
+        new google.maps.LatLng(circle.lat, circle.lng)
+      );
+      if (distanceToCenter <= circle.radius) {
+        Violence++;
+        console.log(`Route entered ${violentlocation} circle radius!`);
+        break;
+      }
+    }
+  }
+//Theft Circles
+  let theftCount = 0;
   for(const theftlocation in TheftLocations) {
     const circle = TheftLocations[theftlocation]
     for(const coordinate of routeCoordinates) {
@@ -608,47 +608,61 @@ const {isLoaded} = useJsApiLoader({
       }
     }
   }
-  alert(`Route entered theft areas ${theftCount} time(s)!`)
-  // for(const RBSlocation in RBSLocations) {
-  //   for(const coordinate of routeCoordinates) {
-  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,RBSlocation);
-  //     if (distanceToCenter <= RBSlocation.radius) {
-  //       RBS += 1;
-  //       // alert('Route entered HorseGuardsAve circle radius!');
-  //       // break;
-  //     }
-  //   }
-  // }
-
-  // for(const Vehiclelocation in VehicleLocations) {
-  //   for(const coordinate of routeCoordinates) {
-  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,Vehiclelocation);
-  //     if (distanceToCenter <= Vehiclelocation.radius) {
-  //       VehicleCrimes += 1;
-  //       // alert('Route entered HorseGuardsAve circle radius!');
-  //       // break;
-  //     }
-  //   }
-  // }
-
-  // for(const Scamlocation in ScamsLocations) {
-  //   for(const coordinate of routeCoordinates) {
-  //     const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(coordinate,Scamlocation);
-  //     if (distanceToCenter <= Scamlocation.radius) {
-  //       Scams += 1;
-  //       // alert('Route entered HorseGuardsAve circle radius!');
-  //       // break;
-  //     }
-  //   }
-  // }
+// Robbery/Burlgary/Shoplifting Circles
+  let RBSCount = 0;
+    for(const RBSlocation in RBSLocations) {
+      const circle = RBSLocations[RBSlocation]
+      for(const coordinate of routeCoordinates) {
+        const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(
+          new google.maps.LatLng(coordinate.lat(),coordinate.lng()),
+          new google.maps.LatLng(circle.lat, circle.lng)
+        );
+        if (distanceToCenter <= circle.radius) {
+          RBSCount++;
+          console.log(`Route entered ${RBSlocation} circle radius!`);
+          break;
+        }
+      }
+    }
+// Vehicle Crime Circles
+ let VehicleCrimeCounts = 0;
+    for(const vehiclelocation in VehicleLocations) {
+      const circle = VehicleLocations[vehiclelocation]
+      for(const coordinate of routeCoordinates) {
+        const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(
+          new google.maps.LatLng(coordinate.lat(),coordinate.lng()),
+          new google.maps.LatLng(circle.lat, circle.lng)
+        );
+        if (distanceToCenter <= circle.radius) {
+          VehicleCrimeCounts++;
+          console.log(`Route entered ${vehiclelocation} circle radius!`);
+          break;
+        }
+      }
+    }
+// Scam Circles
+  let Scams = 0;
+  for(const Scamlocation in ScamsLocations) {
+    const circle = ScamsLocations[Scamlocation]
+    for(const coordinate of routeCoordinates) {
+      const distanceToCenter = google.maps.geometry.spherical.computeDistanceBetween(
+        new google.maps.LatLng(coordinate.lat(),coordinate.lng()),
+        new google.maps.LatLng(circle.lat, circle.lng)
+      );
+      if (distanceToCenter <= circle.radius) {
+        Scams++;
+        console.log(`Route entered ${Scamlocation} circle radius!`);
+        break;
+      }
+    }
+  }
 
     setDirectionResponse(results)
     setDistance(results.routes[0].legs[0].distance.text)
     setDuration(results.routes[0].legs[0].duration.text)
-    // console.log('Before alert')
-    // // alert('Throughout your travel you will go through Violence areas: ' + Violence +' Theft areas: ' + Theft + ' Robbery/Burglary/Shoplifting areas: ' + RBS + ' Vehicle crime areas: ' + VehicleCrimes + ' Scam areas: ' + Scams)
-    // alert('All theft: ' + Theft)
-    // console.log('After alert')
+// Display the amounts
+    alert(`Througout your travel you will encounter - Theft areas: ${theftCount}, Violence areas: ${Violence}, Robbery/Burlgary/Shoplifting areas: ${RBSCount}, VehicleCrime areas: ${VehicleCrimeCounts} and Scam areas: ${Scams}
+    (Click Ok to end this message and see your route and Click Calculate Route to view this again)`)
 
     }
   // Select travel mode
