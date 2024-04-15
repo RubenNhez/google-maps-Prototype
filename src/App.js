@@ -139,6 +139,7 @@ const EsterbrookeSt = {lat: 51.491998, lng: -0.132809, radius:20}
 const PonsonbyPlace = {lat: 51.490199, lng: -0.130802, radius:20}
 const ThirlebyRd = {lat: 51.496344, lng: -0.138701, radius:10}
 const HowichPl = {lat: 51.496677, lng: -0.137328, radius:30}
+
 //Scams (Yellow)
 const WestminsterBridge = {lat: 51.500871, lng: -0.122025, radius:100}
 
@@ -178,6 +179,7 @@ const edithgrove = {lat: 51.481790, lng: -0.181630, radius:10}
 const lotsrd = {lat: 51.480159, lng: -0.185582, radius:10}
 const ThorndickCl = {lat: 51.480502, lng: -0.184263, radius:15}
 const fullhamroad = {lat: 51.483044, lng: -0.185802, radius:15}
+
 //Theft (Lime)
 const EgertonTerrace = {lat: 51.497004, lng:-0.168021, radius:10}
 const FirstSt = {lat: 51.495003, lng: -0.165864, radius:15}
@@ -209,6 +211,7 @@ const EdithYard = {lat: 51.481527, lng: -0.180572, radius:10}
 const AshburnhamRoad = {lat: 51.479920, lng: -0.181066, radius:10}
 const thorndickcl = {lat: 51.480531, lng: -0.184145, radius:10}
 const FullhamRoad = {lat: 51.48274, lng: -0.18615, radius:30}
+
 //Robbery/Burglary/Shoplifting (Orange/Amber)
 const BeauchampPlace = {lat: 51.497393, lng: -0.164317, radius:10}
 const WaltonStreet = {lat: 51.495586, lng: -0.165685, radius:15}
@@ -281,6 +284,7 @@ const TademaRoad = {lat: 51.479843, lng: -0.182148, radius:10}
 const UpcerneRd = {lat: 51.478897, lng: -0.182988, radius:10}
 const LotsRd = {lat: 51.479102, lng: -0.184726, radius:10}
 const HortensiaRd = {lat: 51.481244, lng: -0.184550, radius:10}
+
 //Scams (Yellow)
 const DaycottsApartments = {lat:51.491657, lng: -0.162303, radius:10}
 const IvyChelseaGarden = {lat:51.48707, lng: -0.16938, radius:10}
@@ -415,6 +419,7 @@ const {isLoaded} = useJsApiLoader({
     fullhamroad: {lat: fullhamroad.lat, lng: fullhamroad.lng,radius:fullhamroad.radius},
     TheTrafalgar: {lat:TheTrafalgar.lat,lng: TheTrafalgar.lng,radius:15}
     }
+
     // Theft
     const TheftLocations = {ScotlandYard:{lat: ScotlandYard.lat,lng: ScotlandYard.lng, radius: ScotlandYard.radius},
       KoreanCC:{lat: KoreanCC.lat,lng: KoreanCC.lng, radius: KoreanCC.radius},
@@ -517,7 +522,38 @@ const {isLoaded} = useJsApiLoader({
     CardinalWalk: {lat: CardinalWalk.lat,lng: CardinalWalk.lng,radius: CardinalWalk.radius},
     WarwichRow: {lat: WarwichRow.lat,lng: WarwichRow.lng,radius: WarwichRow.radius},
     KingsRd:{lat: KingsRd.lat, lng: KingsRd.lng,radius:10},
-    
+    BeauchampPlace: {lat: BeauchampPlace.lat, lng: BeauchampPlace.lng, radius: BeauchampPlace.radius},
+    WaltonStreet: {lat: WaltonStreet.lat, lng: WaltonStreet.lng, radius: WaltonStreet.radius},
+    MilnerSt: {lat: MilnerSt.lat, lng: MilnerSt.lng, radius: MilnerSt.radius},
+    PavilionSt: {lat: PavilionSt.lat, lng: PavilionSt.lng, radius: PavilionSt.radius},
+    CadoganSt: {lat: CadoganSt.lat, lng: CadoganSt.lng, radius: CadoganSt.radius},
+    SloaneAvenue: {lat: SloaneAvenue.lat, lng: SloaneAvenue.lng, radius: SloaneAvenue.radius},
+    burywalk: {lat: burywalk.lat, lng: burywalk.lng, radius: burywalk.radius},
+    LincolnSt: {lat: LincolnSt.lat, lng: LincolnSt.lng, radius: LincolnSt.radius},
+    CulfordGardens: {lat: CulfordGardens.lat, lng: CulfordGardens.lng, radius: CulfordGardens.radius},
+    SymonsStreet: {lat: SymonsStreet.lat, lng: SymonsStreet.lng, radius: SymonsStreet.radius},
+    ParkingArea: {lat: ParkingArea.lat, lng: ParkingArea.lng, radius: ParkingArea.radius},
+    CoulsonSt: {lat: CoulsonSt.lat, lng: CoulsonSt.lng, radius: CoulsonSt.radius},
+    BywaterSt: {lat: BywaterSt.lat, lng: BywaterSt.lng, radius: BywaterSt.radius},
+    DanuseStreet: {lat: DanuseStreet.lat, lng: DanuseStreet.lng, radius: DanuseStreet.radius},
+    SParade: {lat: SParade.lat, lng: SParade.lng, radius: SParade.radius},
+    DovehouseSt: {lat: DovehouseSt.lat, lng: DovehouseSt.lng, radius: DovehouseSt.radius},
+    TheTrafalgar: {lat: TheTrafalgar.lat, lng: TheTrafalgar.lng, radius: TheTrafalgar.radius},
+    MarksAndSpencer: {lat: MarksAndSpencer.lat, lng: MarksAndSpencer.lng, radius: MarksAndSpencer.radius},
+    WoodfallSt: {lat: WoodfallSt.lat, lng: WoodfallSt.lng, radius: WoodfallSt.radius},
+    StLeonardsTerrace: {lat: StLeonardsTerrace.lat, lng: StLeonardsTerrace.lng, radius: StLeonardsTerrace.radius},
+    ChelseaManorGardens: {lat: ChelseaManorGardens.lat, lng: ChelseaManorGardens.lng, radius: ChelseaManorGardens.radius},
+    CheyneWalk: {lat: CheyneWalk.lat, lng: CheyneWalk.lng, radius: CheyneWalk.radius},
+    EastRoad: {lat: EastRoad.lat, lng: EastRoad.lng, radius: EastRoad.radius},
+    PaultonsSquare: {lat: PaultonsSquare.lat, lng: PaultonsSquare.lng, radius: PaultonsSquare.radius},
+    MallordSt: {lat: MallordSt.lat, lng: MallordSt.lng, radius: MallordSt.radius},
+    FullhamRd: {lat: FullhamRd.lat, lng: FullhamRd.lng, radius: FullhamRd.radius},
+    WintertonPlace: {lat: WintertonPlace.lat, lng: WintertonPlace.lng, radius: WintertonPlace.radius},
+    SlaidburnSt: {lat: SlaidburnSt.lat, lng: SlaidburnSt.lng, radius: SlaidburnSt.radius},
+    BlantyreStreet: {lat: BlantyreStreet.lat, lng: BlantyreStreet.lng, radius: BlantyreStreet.radius},
+    EdithGrove: {lat: EdithGrove.lat, lng: EdithGrove.lng, radius: EdithGrove.radius},
+    upcernerd: {lat: upcernerd.lat, lng: upcernerd.lng, radius: upcernerd.radius},
+    hortensiaroad: {lat: hortensiaroad.lat, lng: hortensiaroad.lng, radius: hortensiaroad.radius}
   }
 
   //   // Vehicles
