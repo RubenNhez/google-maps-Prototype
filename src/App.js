@@ -143,7 +143,7 @@ const HowichPl = {lat: 51.496677, lng: -0.137328, radius:30}
 //Scams (Yellow)
 const WestminsterBridge = {lat: 51.500871, lng: -0.122025, radius:100}
 
-// Kensington And Chelsea
+// Chelsea
 
 //Violence (RED)
 const OvingtonMews = {lat: 51.497801, lng: -0.165987, radius:10}
@@ -291,6 +291,33 @@ const IvyChelseaGarden = {lat:51.48707, lng: -0.16938, radius:10}
 const sloaneave = {lat: 51.49240, lng: -0.16571, radius:20}
 const RoyalHospitalRd = {lat: 51.486650, lng: -0.160469, radius:15}
 
+// Kensington
+
+//Violence (RED)
+const FawcettStreet = {lat: 51.484400, lng: -0.186457, radius: 15}
+const HollywoodRoad = {lat: 51.486420, lng: -0.184882, radius:10}
+const HarleyGardens = {lat: 51.487542, lng: -0.181124, radius: 10}
+const IfieldRoad = {lat: 51.485139, lng: -0.188766, radius: 10}
+const RedcliffeStreet = {lat: 51.485971, lng:-0.188831, radius: 10}
+const TregunterRoad = {lat: 51.486095, lng: -0.187087, radius:10}
+//Theft (Lime)
+const BillingStreet = {lat: 51.481426, lng: -0.188540, radius: 10}
+const NevilleStreet = {lat: 51.490303, lng: -0.175734, radius:10}
+const cathcartRd = {lat:51.484942, lng: -0.187267, radius: 10}
+//Robbery/Burglary/Shoplifting (Orange/Amber)
+const FinboroughRd = {lat: 51.483946, lng: -0.186021, radius: 10}
+const fawcettstreet = {lat: 51.485051, lng: -0.185503, radius: 10}
+const SeymourWalk = {lat: 51.486338,lng:-0.183079, radius: 10}
+const EvelynGardens = {lat: 51.488599, lng:-0.179409, radius:10}
+const CathcartRoad = {lat: 51.484990, lng: -0.187350, radius:10}
+const tregunterRd = {lat: 51.486164, lng: -0.186946, radius:10}
+//Vehicle crime (Purple)
+const FinboroughRoad = {lat: 51.483895, lng: -0.185975, radius:15}
+const fawcettSt = {lat: 51.484497, lng: -0.186574, radius: 10}
+const seymourwalk = {lat: 51.486263, lng: -0.182945, radius: 10}
+const RedcliffeRoad = {lat: 51.486986, lng: -0.182945, radius: 10}
+const GilstonRoad = {lat: 51.487685, lng: -0.182268, radius: 10}
+//Scams (Yellow)
 
 
 function App() {
@@ -502,7 +529,7 @@ const {isLoaded} = useJsApiLoader({
 
     }
 
-    // Robbery / Bulgary / Shoplifting
+    // Robbery / Burglary / Shoplifting
     const RBSLocations = {HorseGuardsAve: {lat:HorseGuardsAve.lat, lng: HorseGuardsAve.lng, radius: HorseGuardsAve.radius},
     MatthewParkerSt: {lat: MatthewParkerSt.lat,lng: MatthewParkerSt.lng,radius: MatthewParkerSt.radius},
     CaxtonSt: {lat: CaxtonSt.lat,lng: CaxtonSt.lng,radius: CaxtonSt.radius},
@@ -644,7 +671,7 @@ const {isLoaded} = useJsApiLoader({
       }
     }
   }
-// Robbery/Burlgary/Shoplifting Circles
+// Robbery/Burglary/Shoplifting Circles
   let RBSCount = 0;
     for(const RBSlocation in RBSLocations) {
       const circle = RBSLocations[RBSlocation]
@@ -697,7 +724,7 @@ const {isLoaded} = useJsApiLoader({
     setDistance(results.routes[0].legs[0].distance.text)
     setDuration(results.routes[0].legs[0].duration.text)
 // Display the amounts
-    alert(`Througout your travel you will encounter - Theft areas: ${theftCount}, Violence areas: ${Violence}, Robbery/Burlgary/Shoplifting areas: ${RBSCount}, VehicleCrime areas: ${VehicleCrimeCounts} and Scam areas: ${Scams}
+    alert(`Througout your travel you will encounter - Theft areas: ${theftCount}, Violence areas: ${Violence}, Robbery/Burglary/Shoplifting areas: ${RBSCount}, VehicleCrime areas: ${VehicleCrimeCounts} and Scam areas: ${Scams}
     (Click Ok to end this message and see your route and Click Calculate Route to view this again)`)
 
     }
@@ -769,17 +796,17 @@ const {isLoaded} = useJsApiLoader({
         onLoad={(map) => { 
           setMap(map)
           //Circle around goldsmiths test
-          const circle = new google.maps.Circle({
-            strokeColor: '#FF0000',
-            strokeWeight: 2,
-            strokeOpacity: 1,
-            fillColor: '#FF0000',
-            fillOpacity: .4,
-            center: center,
-            radius: 100,
-            map: map
-          });
-        setMap(circle)
+        //   const circle = new google.maps.Circle({
+        //     strokeColor: '#FF0000',
+        //     strokeWeight: 2,
+        //     strokeOpacity: 1,
+        //     fillColor: '#FF0000',
+        //     fillOpacity: .4,
+        //     center: center,
+        //     radius: 100,
+        //     map: map
+        //   });
+        // setMap(circle)
           
           //Westminster
           //Violence
@@ -1646,6 +1673,78 @@ const {isLoaded} = useJsApiLoader({
             map: map
           });
           setMap(V72)
+
+          const V73 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: FawcettStreet,
+            radius: 15,
+            map: map
+          });
+          setMap(V73)
+
+          const V74 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: HollywoodRoad,
+            radius: 10,
+            map: map
+          });
+          setMap(V74)
+
+          const V75 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: HarleyGardens,
+            radius: 10,
+            map: map
+          });
+          setMap(V75)
+
+          const V76 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: IfieldRoad,
+            radius: 10,
+            map: map
+          });
+          setMap(V76)
+
+          const V77 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: RedcliffeStreet,
+            radius: 10,
+            map: map
+          });
+          setMap(V77)
+
+          const V78 = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeWeight: 2,
+            strokeOpacity: 1,
+            fillColor: '#FF0000',
+            fillOpacity: .4,
+            center: TregunterRoad,
+            radius: 10,
+            map: map
+          });
+          setMap(V78)
 
 
         //Theft
@@ -2599,6 +2698,42 @@ const T79 = new google.maps.Circle({
 });
 setMap(T79)
 
+const T80 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: BillingStreet,
+  radius: 10,
+  map: map
+});
+setMap(T80)
+
+const T81 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: NevilleStreet,
+  radius: 10,
+  map: map
+});
+setMap(T81)
+
+const T82 = new google.maps.Circle({
+  strokeColor: '#00FF00',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#00FF00',
+  fillOpacity: .4,
+  center: cathcartRd,
+  radius: 10,
+  map: map
+});
+setMap(T82)
+
         //Robbery/Burglary/Shoplifting (Orange/Amber)
           const RBS1 = new google.maps.Circle({
             strokeColor: '#FFA500',
@@ -3238,6 +3373,78 @@ const RBS53 = new google.maps.Circle({
 });
 setMap(RBS53)
 
+const RBS54 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: FinboroughRd,
+  radius: 10,
+  map: map
+});
+setMap(RBS54)
+
+const RBS55 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: fawcettstreet,
+  radius: 10,
+  map: map
+});
+setMap(RBS55)
+
+const RBS56 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: SeymourWalk,
+  radius: 10,
+  map: map
+});
+setMap(RBS56)
+
+const RBS57 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: EvelynGardens,
+  radius: 10,
+  map: map
+});
+setMap(RBS57)
+
+const RBS58 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: CathcartRoad,
+  radius: 10,
+  map: map
+});
+setMap(RBS58)
+
+const RBS59 = new google.maps.Circle({
+  strokeColor: '#FFA500',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#FFA500',
+  fillOpacity: .4,
+  center: tregunterRd,
+  radius: 10,
+  map: map
+});
+setMap(RBS59)
+
         //Vehicle Crimes
         const VehC1 = new google.maps.Circle({
           strokeColor: '#800080',
@@ -3755,6 +3962,66 @@ const VehC43 = new google.maps.Circle({
 });
 setMap(VehC43)
 
+const VehC44 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: FinboroughRoad,
+  radius: 15,
+  map: map
+});
+setMap(VehC44)
+
+const VehC45 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: fawcettSt,
+  radius: 10,
+  map: map
+});
+setMap(VehC45)
+
+const VehC46 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: seymourwalk,
+  radius: 10,
+  map: map
+});
+setMap(VehC46)
+
+const VehC47 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: RedcliffeRoad,
+  radius: 10,
+  map: map
+});
+setMap(VehC47)
+
+const VehC48 = new google.maps.Circle({
+  strokeColor: '#800080',
+  strokeWeight: 2,
+  strokeOpacity: 1,
+  fillColor: '#800080',
+  fillOpacity: .4,
+  center: GilstonRoad,
+  radius: 10,
+  map: map
+});
+setMap(VehC48)
+
 // Scams (Yellow)
 const S1 = new google.maps.Circle({
   strokeColor: '#FFFF00',
@@ -3871,6 +4138,14 @@ setMap(S5)
         <HStack spacing={4} mt={4} justifyContent='space-between'>
           <Text>Distance: {distance}</Text>
           <Text>Duration: {duration}</Text>
+          <Text>
+            Circle Colours definitions:
+            <span style={{color: '#FF0000'}}> Violence</span>
+            <span style={{color: '#00FF00'}}> Theft</span>
+            <span style={{color: '#FFA500'}}> Robbery/Burglary/Shoplifting</span>
+            <span style={{color: '#800080'}}> Vehicle Crimes</span>
+            <span style={{color: '#FFFF00'}}> Scams</span>
+          </Text>
           <IconButton
             aria-label='center back'
             icon={<FaLocationArrow />}
